@@ -1,0 +1,45 @@
+---------------------
+ Credits
+---------------------
+
+- Bootstrap 4.1 - http://getbootstrap.com/docs/4.1/getting-started/introduction/
+
+- Lightbox2 - http://lokeshdhakar.com/projects/lightbox2/
+
+- Font Awesome 4.7 - http://fontawesome.io/
+
+
+
+---------------------
+ Images
+---------------------
+
+- Photos for demo purposes - Pexels.com
+
+	https://www.pexels.com/photo/architect-composition-data-demonstration-313691/
+
+	https://www.pexels.com/photo/architecture-bridge-buildings-business-374018/
+
+	https://www.pexels.com/photo/two-person-shaking-each-others-hands-872957/
+
+	https://www.pexels.com/photo/woman-in-white-t-shirt-holding-smartphone-in-front-of-laptop-914931/
+
+	https://www.pexels.com/photo/person-writing-on-notebook-669615/
+
+	https://www.pexels.com/photo/blue-and-yellow-graph-on-stock-market-monitor-159888/
+
+
+- Illustrations from Undrow - https://undraw.co/illustrations
+
+- Free SVG Icons from Flaticon - https://www.flaticon.com/
+
+- Clients logos from Freepik - https://www.freepik.com/free-vector/spaceship-logo-collection_1022514.htm#term=spaceship%20collection&page=1&position=2
+
+
+---------------------
+ Fonts
+---------------------
+
+- Poppins - https://fonts.google.com/specimen/Poppins
+
+
