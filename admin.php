@@ -1,7 +1,7 @@
 <html>
 
    <head>
-      <title>User Login | Book Planet</title>
+      <title>Admin Login | Book Planet</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
@@ -155,7 +155,6 @@ background-color: #3b5998;
         <div class="card card-signin my-5">
           <div class="card-body">
             <img src="images/logo-bookplanet.png" style="max-height:120px;padding:15px;margin-top:12px">
-
             <h5 class="card-title text-center">Admin Login Panel</h5>
             <form class="form-signin" name="loginForm" method="post" action="sales.php" style="">
               <div class="form-label-group">
@@ -171,7 +170,7 @@ background-color: #3b5998;
               <div class="custom-control custom-checkbox mb-3">
                 <input type="checkbox" class="custom-control-input" id="customCheck1">
               </div>
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" onclick="return check(this.form)" value="Login">Sign in</button>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" onclick="return check(this.form)" value="Login"><i class="fas fa-sign-in-alt mr-2"></i>Sign in</button>
             </form>
             <div class="form-signin">
               <hr class="my-4">
