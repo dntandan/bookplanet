@@ -188,7 +188,7 @@ background-color: #3b5998;
   function check(form)
   {
 
-  if(form.userid.value == "dntandan" && form.pwd.value == "login@time")
+  if(form.userid.value == "dntandan" && form.pwd.value == "admin@password")
   {
    return true;
   }
