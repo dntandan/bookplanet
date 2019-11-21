@@ -57,11 +57,11 @@ $uid=$row["user_id"];
           <div id="navbarSupportedContent" class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
               <!-- Link-->
-              <li class="nav-item"> <a href="index.html" class="nav-link active"><i class="fas fa-sign-in-alt mr-2">
+              <li class="nav-item" > <a href="index.html" class="nav-link active" style="color:#e7475e!important;"><i class="fas fa-sign-in-alt mr-2">
               </i>Welcome,
               <?php echo $username ?></a></li>
-          </ul><a href="contact.php" data-toggle="modal" data-target="#login" class="btn btn-primary navbar-btn ml-0 ml-lg-3">Contact </a>
-        </ul><a href="index.php" data-toggle="modal" data-target="#login" class="btn btn-primary navbar-btn ml-0 ml-lg-3">Logout </a>
+          </ul><a href="contact.php"  class="btn btn-primary navbar-btn ml-0 ml-lg-3">Contact </a>
+        </ul><a href="index.php"  class="btn btn-primary navbar-btn ml-0 ml-lg-3">Logout </a>
           </div>
         </div>
       </nav>
