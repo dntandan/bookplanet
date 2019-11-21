@@ -373,7 +373,7 @@ Appliances
                         <input type="hidden" name="username" value=
                                <?php echo $username?>>
                         <input type="hidden" name="bookid" value=1>
-                        <input type="submit" name="submit" value="Buy Now" class="mb-3 btn-block btn btn-outline-success" />
+                        <input type="submit" name="submit" value="Buy Now" class="mt-2 mb-3 btn-block btn btn-outline-success" />
                       </fieldset>
                     </form>
                   </div>
@@ -391,7 +391,7 @@ Appliances
                       <a href="single.php?username=<?php echo $username ?>&bookid=2" class="link-product-add-cart text-dark">Poemsia
                       </a>
                     </h5>
-                    <p class="small text-muted font-italic">From award-winning author and poet Lang Leav. When Verity stumbles on an old, mysterious book, Poemsia, she finds herself suddenly thrust into the dizzying world of social media stardom, where poets are the new rock stars.
+                    <p class="small text-muted font-italic">From award-winning author and poet Lang Leav a mysterious book, Poemsia, she finds herself suddenly thrust into the dizzying world of social media stardom, where poets are the new rock stars.
                     <ul class="list-inline small">
                       <li class="list-inline-item m-0">
                         <i class="fa fa-star text-success">
@@ -425,7 +425,7 @@ Appliances
                         <input type="hidden" name="username" value=
                                <?php echo $username?>>
                         <input type="hidden" name="bookid" value=2>
-                        <input type="submit" name="submit" value="Buy Now" class="mb-3 btn-block btn btn-outline-success" />
+                        <input type="submit" name="submit" value="Buy Now" class="mt-2 mb-3 btn-block btn btn-outline-success" />
                       </fieldset>
                     </form>
                   </div>
@@ -443,9 +443,7 @@ Appliances
                       <a href="single.php?username=<?php echo $username ?>&bookid=3" class="link-product-add-cart text-dark">I'm Rising
                       </a>
                     </h5>
-                    <p class="small text-muted font-italic">The Time Machine is a science fiction novella by H. G. Wells, published in 1895 and written as a frame narrative.
-                    </p>
-                    <ul class="list-inline small">
+                    <p class="small text-muted font-italic">Bestselling author Michelle Stradford follows “I'm Rising: Determined. Confident. Powerful.” tells an emotive journey of empowerment through life’s countless triumphs and tribulations.
                       <li class="list-inline-item m-0">
                         <i class="fa fa-star text-success">
                         </i>
@@ -496,8 +494,7 @@ Appliances
                       <a href="single.php?username=<?php echo $username ?>&bookid=4" class="link-product-add-cart text-dark">Hull
                       </a>
                     </h5>
-                    <p class="small text-muted font-italic">The Time Machine is a science fiction novella by H. G. Wells, published in 1895 and written as a frame narrative.
-                    </p>
+                    <p class="small text-muted font-italic">Hull by African American poet Xandria Phillips explores the present-day emotional impacts of enslavement and colonization on the Black queer body in urban, rural, and international settings.
                     <ul class="list-inline small">
                       <li class="list-inline-item m-0">
                         <i class="fa fa-star text-success">
