@@ -322,7 +322,7 @@ Appliances
               </p>
             </header>
             <!-- Start First Row [Books]-->
-            <h2 class="font-weight-bold mb-2">Romantic
+            <h2 class="font-weight-bold mb-2">Poetry
             </h2>
             <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
             </p>
@@ -332,13 +332,13 @@ Appliances
                 <!-- Card-->
                 <div class="card rounded shadow-sm border-0">
                   <div class="card-body p-4">
-                    <h5><span class="badge badge-pill badge-info mb-2">₹ 90.00</span></h5>
-                    <img src="images/m1.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                    <h5><span class="badge badge-pill badge-info mb-2">₹ 196.00</span></h5>
+                    <img src="images/books/poetry/arias.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
                     <h5>
-                      <a href="single.php?username=<?php echo $username ?>&bookid=1" class="link-product-add-cart text-dark">The Time Machine
+                      <a href="single.php?username=<?php echo $username ?>&bookid=1" class="link-product-add-cart text-dark">Arias
                       </a>
                     </h5>
-                    <p class="small text-muted font-italic">The Time Machine is a science fiction novella by H. G. Wells, published in 1895 and written as a frame narrative.
+                    <p class="small text-muted font-italic">Following her recent Odes, the Pulitzer Prize-winning poet Sharon Olds gives us radical new poems of intimate life and political conscience, of race and class and a mother's violence.
                     </p>
                     <ul class="list-inline small">
                       <li class="list-inline-item m-0">
@@ -366,8 +366,8 @@ Appliances
                   <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
                     <form action="checkout.php" method="post">
                       <fieldset>
-                        <input type="hidden" name="item_name" value="The Time Machine" />
-                        <input type="hidden" name="amount" value="161" />
+                        <input type="hidden" name="item_name" value="Arias" />
+                        <input type="hidden" name="amount" value="196" />
                         <input type="hidden" name="uid" value=
                                <?php echo $uid?>>
                         <input type="hidden" name="username" value=
@@ -385,14 +385,13 @@ Appliances
                 <!-- Card-->
                 <div class="card rounded shadow-sm border-0">
                   <div class="card-body p-4">
-                    <h5><span class="badge badge-pill badge-info mb-2">₹ 90.00</span></h5>
-                    <img src="images/m1.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                    <h5><span class="badge badge-pill badge-info mb-2">₹ 120.00</span></h5>
+                    <img src="images/books/poetry/poemsia.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
                     <h5>
-                      <a href="single.php?username=<?php echo $username ?>&bookid=1" class="link-product-add-cart text-dark">The Time Machine
+                      <a href="single.php?username=<?php echo $username ?>&bookid=2" class="link-product-add-cart text-dark">Poemsia
                       </a>
                     </h5>
-                    <p class="small text-muted font-italic">The Time Machine is a science fiction novella by H. G. Wells, published in 1895 and written as a frame narrative.
-                    </p>
+                    <p class="small text-muted font-italic">From award-winning author and poet Lang Leav. When Verity stumbles on an old, mysterious book, Poemsia, she finds herself suddenly thrust into the dizzying world of social media stardom, where poets are the new rock stars.
                     <ul class="list-inline small">
                       <li class="list-inline-item m-0">
                         <i class="fa fa-star text-success">
@@ -419,13 +418,13 @@ Appliances
                   <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
                     <form action="checkout.php" method="post">
                       <fieldset>
-                        <input type="hidden" name="item_name" value="The Time Machine" />
-                        <input type="hidden" name="amount" value="161" />
+                        <input type="hidden" name="item_name" value="Poemsia" />
+                        <input type="hidden" name="amount" value="120" />
                         <input type="hidden" name="uid" value=
                                <?php echo $uid?>>
                         <input type="hidden" name="username" value=
                                <?php echo $username?>>
-                        <input type="hidden" name="bookid" value=1>
+                        <input type="hidden" name="bookid" value=2>
                         <input type="submit" name="submit" value="Buy Now" class="mb-3 btn-block btn btn-outline-success" />
                       </fieldset>
                     </form>
@@ -438,10 +437,10 @@ Appliances
                 <!-- Card-->
                 <div class="card rounded shadow-sm border-0">
                   <div class="card-body p-4">
-                    <h5><span class="badge badge-pill badge-info mb-2">₹ 90.00</span></h5>
-                    <img src="images/m1.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                    <h5><span class="badge badge-pill badge-info mb-2">₹ 140.00</span></h5>
+                    <img src="images/books/poetry/imrising.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
                     <h5>
-                      <a href="single.php?username=<?php echo $username ?>&bookid=1" class="link-product-add-cart text-dark">The Time Machine
+                      <a href="single.php?username=<?php echo $username ?>&bookid=3" class="link-product-add-cart text-dark">I'm Rising
                       </a>
                     </h5>
                     <p class="small text-muted font-italic">The Time Machine is a science fiction novella by H. G. Wells, published in 1895 and written as a frame narrative.
@@ -472,13 +471,13 @@ Appliances
                   <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
                     <form action="checkout.php" method="post">
                       <fieldset>
-                        <input type="hidden" name="item_name" value="The Time Machine" />
-                        <input type="hidden" name="amount" value="161" />
+                        <input type="hidden" name="item_name" value="I'm Rising" />
+                        <input type="hidden" name="amount" value="140" />
                         <input type="hidden" name="uid" value=
                                <?php echo $uid?>>
                         <input type="hidden" name="username" value=
                                <?php echo $username?>>
-                        <input type="hidden" name="bookid" value=1>
+                        <input type="hidden" name="bookid" value=3>
                         <input type="submit" name="submit" value="Buy Now" class="mb-3 btn-block btn btn-outline-success" />
                       </fieldset>
                     </form>
@@ -491,10 +490,10 @@ Appliances
                 <!-- Card-->
                 <div class="card rounded shadow-sm border-0">
                   <div class="card-body p-4">
-                    <h5><span class="badge badge-pill badge-info mb-2">₹ 90.00</span></h5>
-                    <img src="images/m1.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                    <h5><span class="badge badge-pill badge-info mb-2">₹ 100.00</span></h5>
+                    <img src="images/books/poetry/hull.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
                     <h5>
-                      <a href="single.php?username=<?php echo $username ?>&bookid=1" class="link-product-add-cart text-dark">The Time Machine
+                      <a href="single.php?username=<?php echo $username ?>&bookid=4" class="link-product-add-cart text-dark">Hull
                       </a>
                     </h5>
                     <p class="small text-muted font-italic">The Time Machine is a science fiction novella by H. G. Wells, published in 1895 and written as a frame narrative.
@@ -525,13 +524,13 @@ Appliances
                   <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
                     <form action="checkout.php" method="post">
                       <fieldset>
-                        <input type="hidden" name="item_name" value="The Time Machine" />
-                        <input type="hidden" name="amount" value="161" />
+                        <input type="hidden" name="item_name" value="Hull" />
+                        <input type="hidden" name="amount" value="100" />
                         <input type="hidden" name="uid" value=
                                <?php echo $uid?>>
                         <input type="hidden" name="username" value=
                                <?php echo $username?>>
-                        <input type="hidden" name="bookid" value=1>
+                        <input type="hidden" name="bookid" value=4>
                         <input type="submit" name="submit" value="Buy Now" class="mb-3 btn-block btn btn-outline-success" />
                       </fieldset>
                     </form>
@@ -543,7 +542,7 @@ Appliances
             <!-- End First Row [Books]-->
 
             <!-- Start Second Row [Books]-->
-            <h2 class="font-weight-bold mb-2">History
+            <h2 class="font-weight-bold mb-2">Thriller
             </h2>
             <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
             </p>
@@ -764,7 +763,7 @@ Appliances
             <!-- End Second Row [Prosucts]-->
 
             <!-- Start Third Row [Books]-->
-            <h2 class="font-weight-bold mb-2">Fiction
+            <h2 class="font-weight-bold mb-2">History
             </h2>
             <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
             </p>
@@ -774,14 +773,66 @@ Appliances
                 <!-- Card-->
                 <div class="card rounded shadow-sm border-0">
                   <div class="card-body p-4">
-                    <h5><span class="badge badge-pill badge-info mb-2">₹ 90.00</span></h5>
-                    <img src="images/m1.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                    <h5><span class="badge badge-pill badge-info mb-2">₹ 365.00</span></h5>
+                    <img src="images/books/history/sapiens.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
                     <h5>
-                      <a href="single.php?username=<?php echo $username ?>&bookid=1" class="link-product-add-cart text-dark">The Time Machine
+                      <a href="single.php?username=<?php echo $username ?>&bookid=9" class="link-product-add-cart text-dark">Sapiens
                       </a>
                     </h5>
-                    <p class="small text-muted font-italic">The Time Machine is a science fiction novella by H. G. Wells, published in 1895 and written as a frame narrative.
+                    <p class="small text-muted font-italic">Sapiens by Yuval Noah Harari tells about why did our foraging ancestors come together to create cities and kingdoms?
                     </p>
+                    <ul class="list-inline small">
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    <form action="checkout.php" method="post">
+                      <fieldset>
+                        <input type="hidden" name="item_name" value="Sapiens" />
+                        <input type="hidden" name="amount" value="365" />
+                        <input type="hidden" name="uid" value=
+                               <?php echo $uid?>>
+                        <input type="hidden" name="username" value=
+                               <?php echo $username?>>
+                        <input type="hidden" name="bookid" value=9>
+                        <input type="submit" name="submit" value="Buy Now" class="mb-3 btn-block btn btn-outline-success" />
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- End Book Card -->
+              <!-- Start Book Card -->
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <!-- Card-->
+                <div class="card rounded shadow-sm border-0">
+                  <div class="card-body p-4">
+                    <h5><span class="badge badge-pill badge-info mb-2">₹ 186.00</span></h5>
+                    <img src="images/books/history/nosurrender.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                    <h5>
+                      <a href="single.php?username=<?php echo $username ?>&bookid=10" class="link-product-add-cart text-dark">No Surrender
+                      </a>
+                    </h5>
+                    <p class="small text-muted font-italic">No Surrender is an unforgettable story of a father’s extraordinary acts of valor during World War II by Christopher Edmonds .
                     <ul class="list-inline small">
                       <li class="list-inline-item m-0">
                         <i class="fa fa-star text-success">
@@ -808,13 +859,66 @@ Appliances
                   <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
                     <form action="checkout.php" method="post">
                       <fieldset>
-                        <input type="hidden" name="item_name" value="The Time Machine" />
-                        <input type="hidden" name="amount" value="161" />
+                        <input type="hidden" name="item_name" value="No Surrender" />
+                        <input type="hidden" name="amount" value="186" />
                         <input type="hidden" name="uid" value=
                                <?php echo $uid?>>
                         <input type="hidden" name="username" value=
                                <?php echo $username?>>
-                        <input type="hidden" name="bookid" value=1>
+                        <input type="hidden" name="bookid" value=10>
+                        <input type="submit" name="submit" value="Buy Now" class="mb-3 btn-block btn btn-outline-success" />
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- End Book Card -->
+              <!-- Start Book Card -->
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <!-- Card-->
+                <div class="card rounded shadow-sm border-0">
+                  <div class="card-body p-4">
+                    <h5><span class="badge badge-pill badge-info mb-2">₹ 255.00</span></h5>
+                    <img src="images/books/history/edison.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                    <h5>
+                      <a href="single.php?username=<?php echo $username ?>&bookid=11" class="link-product-add-cart text-dark">Edison
+                      </a>
+                    </h5>
+                    <p class="small text-muted font-italic">From Pulitzer Prize-winning author Edmund Morris comes the biography of Thomas Alva Edison, the most prolific genius in American history.
+                    </p>
+                    <ul class="list-inline small">
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    <form action="checkout.php" method="post">
+                      <fieldset>
+                        <input type="hidden" name="item_name" value="Edison" />
+                        <input type="hidden" name="amount" value="255" />
+                        <input type="hidden" name="uid" value=
+                               <?php echo $uid?>>
+                        <input type="hidden" name="username" value=
+                               <?php echo $username?>>
+                        <input type="hidden" name="bookid" value=11>
                         <input type="submit" name="submit" value="Buy Now" class="mb-3 btn-block btn btn-outline-success" />
                       </fieldset>
                     </form>
@@ -828,12 +932,12 @@ Appliances
                 <div class="card rounded shadow-sm border-0">
                   <div class="card-body p-4">
                     <h5><span class="badge badge-pill badge-info mb-2">₹ 90.00</span></h5>
-                    <img src="images/m1.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                    <img src="images/books/history/stolen.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
                     <h5>
-                      <a href="single.php?username=<?php echo $username ?>&bookid=1" class="link-product-add-cart text-dark">The Time Machine
+                      <a href="single.php?username=<?php echo $username ?>&bookid=12" class="link-product-add-cart text-dark">Stolen
                       </a>
                     </h5>
-                    <p class="small text-muted font-italic">The Time Machine is a science fiction novella by H. G. Wells, published in 1895 and written as a frame narrative.
+                    <p class="small text-muted font-italic">A gripping and true story by Richard Bell, about five boys who were kidnapped in the North and smuggled into slavery in the Deep South.
                     </p>
                     <ul class="list-inline small">
                       <li class="list-inline-item m-0">
@@ -852,128 +956,18 @@ Appliances
                         <i class="fa fa-star text-success">
                         </i>
                       </li>
-                      <li class="list-inline-item m-0">
-                        <i class="fa fa-star-half text-success">
-                        </i>
-                      </li>
                     </ul>
                   </div>
                   <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
                     <form action="checkout.php" method="post">
                       <fieldset>
-                        <input type="hidden" name="item_name" value="The Time Machine" />
-                        <input type="hidden" name="amount" value="161" />
+                        <input type="hidden" name="item_name" value="Stolen" />
+                        <input type="hidden" name="amount" value="310" />
                         <input type="hidden" name="uid" value=
                                <?php echo $uid?>>
                         <input type="hidden" name="username" value=
                                <?php echo $username?>>
-                        <input type="hidden" name="bookid" value=1>
-                        <input type="submit" name="submit" value="Buy Now" class="mb-3 btn-block btn btn-outline-success" />
-                      </fieldset>
-                    </form>
-                  </div>
-                </div>
-              </div>
-              <!-- End Book Card -->
-              <!-- Start Book Card -->
-              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                <!-- Card-->
-                <div class="card rounded shadow-sm border-0">
-                  <div class="card-body p-4">
-                    <h5><span class="badge badge-pill badge-info mb-2">₹ 90.00</span></h5>
-                    <img src="images/m1.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
-                    <h5>
-                      <a href="single.php?username=<?php echo $username ?>&bookid=1" class="link-product-add-cart text-dark">The Time Machine
-                      </a>
-                    </h5>
-                    <p class="small text-muted font-italic">The Time Machine is a science fiction novella by H. G. Wells, published in 1895 and written as a frame narrative.
-                    </p>
-                    <ul class="list-inline small">
-                      <li class="list-inline-item m-0">
-                        <i class="fa fa-star text-success">
-                        </i>
-                      </li>
-                      <li class="list-inline-item m-0">
-                        <i class="fa fa-star text-success">
-                        </i>
-                      </li>
-                      <li class="list-inline-item m-0">
-                        <i class="fa fa-star text-success">
-                        </i>
-                      </li>
-                      <li class="list-inline-item m-0">
-                        <i class="fa fa-star text-success">
-                        </i>
-                      </li>
-                      <li class="list-inline-item m-0">
-                        <i class="fa fa-star-half text-success">
-                        </i>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                    <form action="checkout.php" method="post">
-                      <fieldset>
-                        <input type="hidden" name="item_name" value="The Time Machine" />
-                        <input type="hidden" name="amount" value="161" />
-                        <input type="hidden" name="uid" value=
-                               <?php echo $uid?>>
-                        <input type="hidden" name="username" value=
-                               <?php echo $username?>>
-                        <input type="hidden" name="bookid" value=1>
-                        <input type="submit" name="submit" value="Buy Now" class="mb-3 btn-block btn btn-outline-success" />
-                      </fieldset>
-                    </form>
-                  </div>
-                </div>
-              </div>
-              <!-- End Book Card -->
-              <!-- Start Book Card -->
-              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                <!-- Card-->
-                <div class="card rounded shadow-sm border-0">
-                  <div class="card-body p-4">
-                    <h5><span class="badge badge-pill badge-info mb-2">₹ 90.00</span></h5>
-                    <img src="images/m1.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
-                    <h5>
-                      <a href="single.php?username=<?php echo $username ?>&bookid=1" class="link-product-add-cart text-dark">The Time Machine
-                      </a>
-                    </h5>
-                    <p class="small text-muted font-italic">The Time Machine is a science fiction novella by H. G. Wells, published in 1895 and written as a frame narrative.
-                    </p>
-                    <ul class="list-inline small">
-                      <li class="list-inline-item m-0">
-                        <i class="fa fa-star text-success">
-                        </i>
-                      </li>
-                      <li class="list-inline-item m-0">
-                        <i class="fa fa-star text-success">
-                        </i>
-                      </li>
-                      <li class="list-inline-item m-0">
-                        <i class="fa fa-star text-success">
-                        </i>
-                      </li>
-                      <li class="list-inline-item m-0">
-                        <i class="fa fa-star text-success">
-                        </i>
-                      </li>
-                      <li class="list-inline-item m-0">
-                        <i class="fa fa-star-half text-success">
-                        </i>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                    <form action="checkout.php" method="post">
-                      <fieldset>
-                        <input type="hidden" name="item_name" value="The Time Machine" />
-                        <input type="hidden" name="amount" value="161" />
-                        <input type="hidden" name="uid" value=
-                               <?php echo $uid?>>
-                        <input type="hidden" name="username" value=
-                               <?php echo $username?>>
-                        <input type="hidden" name="bookid" value=1>
+                        <input type="hidden" name="bookid" value=12>
                         <input type="submit" name="submit" value="Buy Now" class="mb-3 btn-block btn btn-outline-success" />
                       </fieldset>
                     </form>
@@ -983,6 +977,219 @@ Appliances
               <!-- End Book Card -->
             </div>
             <!-- End Third Row [Prosucts]-->
+
+            <!-- Start Fourth Row [Books]-->
+            <h2 class="font-weight-bold mb-2">Short Story
+            </h2>
+            <p class="font-italic text-muted mb-4">Short story is a piece of prose fiction that typically can be read in one sitting and focuses on <br>a self-contained incident or series of linked incidents.
+            </p>
+            <div class="row pb-5 mb-4">
+              <!-- Start Book Card -->
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <!-- Card-->
+                <div class="card rounded shadow-sm border-0">
+                  <div class="card-body p-4">
+                    <h5><span class="badge badge-pill badge-info mb-2">₹ 250.00</span></h5>
+                    <img src="images/books/shortstory/dearlife.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                    <h5>
+                      <a href="single.php?username=<?php echo $username ?>&bookid=13" class="link-product-add-cart text-dark">Dear Life
+                      </a>
+                    </h5>
+                    <p class="small text-muted font-italic">Dear Life is a short story collection by Canadian writer Alice Munro, published in 2012 by McClelland and Stewart.
+                    </p>
+                    <ul class="list-inline small">
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star-half text-success">
+                        </i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    <form action="checkout.php" method="post">
+                      <fieldset>
+                        <input type="hidden" name="item_name" value="Dear Life" />
+                        <input type="hidden" name="amount" value="250" />
+                        <input type="hidden" name="uid" value=
+                               <?php echo $uid?>>
+                        <input type="hidden" name="username" value=
+                               <?php echo $username?>>
+                        <input type="hidden" name="bookid" value=13>
+                        <input type="submit" name="submit" value="Buy Now" class="mb-3 btn-block btn btn-outline-success" />
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- End Book Card -->
+              <!-- Start Book Card -->
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <!-- Card-->
+                <div class="card rounded shadow-sm border-0">
+                  <div class="card-body p-4">
+                    <h5><span class="badge badge-pill badge-info mb-2">₹ 180.00</span></h5>
+                    <img src="images/books/shortstory/fragilethings.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                    <h5>
+                      <a href="single.php?username=<?php echo $username ?>&bookid=14" class="link-product-add-cart text-dark">Fragile Things
+                      </a>
+                    </h5>
+                    <p class="small text-muted font-italic">Short Fictions and Wonders is a collection of short stories and poetry by English author Neil Gaiman in the year 2006.
+                    </p>
+                    <ul class="list-inline small">
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    <form action="checkout.php" method="post">
+                      <fieldset>
+                        <input type="hidden" name="item_name" value="Fragile Things" />
+                        <input type="hidden" name="amount" value="180" />
+                        <input type="hidden" name="uid" value=
+                               <?php echo $uid?>>
+                        <input type="hidden" name="username" value=
+                               <?php echo $username?>>
+                        <input type="hidden" name="bookid" value=14>
+                        <input type="submit" name="submit" value="Buy Now" class="mb-3 btn-block btn btn-outline-success" />
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- End Book Card -->
+              <!-- Start Book Card -->
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <!-- Card-->
+                <div class="card rounded shadow-sm border-0">
+                  <div class="card-body p-4">
+                    <h5><span class="badge badge-pill badge-info mb-2">₹ 220.00</span></h5>
+                    <img src="images/books/shortstory/thegrownup.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                    <h5>
+                      <a href="single.php?username=<?php echo $username ?>&bookid=15" class="link-product-add-cart text-dark">The Grownup
+                      </a>
+                    </h5>
+                    <p class="small text-muted font-italic">The Grownup, like others of Gillian Flynn's works, leaves us unprepared for the journey we are embarking on.
+                    </p>
+                    <ul class="list-inline small">
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    <form action="checkout.php" method="post">
+                      <fieldset>
+                        <input type="hidden" name="item_name" value="The Grownup" />
+                        <input type="hidden" name="amount" value="220" />
+                        <input type="hidden" name="uid" value=
+                               <?php echo $uid?>>
+                        <input type="hidden" name="username" value=
+                               <?php echo $username?>>
+                        <input type="hidden" name="bookid" value=15>
+                        <input type="submit" name="submit" value="Buy Now" class="mb-3 btn-block btn btn-outline-success" />
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- End Book Card -->
+              <!-- Start Book Card -->
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <!-- Card-->
+                <div class="card rounded shadow-sm border-0">
+                  <div class="card-body p-4">
+                    <h5><span class="badge badge-pill badge-info mb-2">₹ 120.00</span></h5>
+                    <img src="images/books/shortstory/getintrouble.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                    <h5>
+                      <a href="single.php?username=<?php echo $username ?>&bookid=16" class="link-product-add-cart text-dark">Get In Trouble
+                      </a>
+                    </h5>
+                    <p class="small text-muted font-italic">Get in Trouble is a collection of short stories by author Kelly Link. It contains nine short stories.
+                    </p>
+                    <ul class="list-inline small">
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star text-success">
+                        </i>
+                      </li>
+                      <li class="list-inline-item m-0">
+                        <i class="fa fa-star-half text-success">
+                        </i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    <form action="checkout.php" method="post">
+                      <fieldset>
+                        <input type="hidden" name="item_name" value="Get In Trouble" />
+                        <input type="hidden" name="amount" value="120" />
+                        <input type="hidden" name="uid" value=
+                               <?php echo $uid?>>
+                        <input type="hidden" name="username" value=
+                               <?php echo $username?>>
+                        <input type="hidden" name="bookid" value=16>
+                        <input type="submit" name="submit" value="Buy Now" class="mb-3 btn-block btn btn-outline-success" />
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- End Book Card -->
+            </div>
+            <!-- End Fourth Row [Prosucts]-->
 
           </div>
 
