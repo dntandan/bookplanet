@@ -1,133 +1,185 @@
 <html>
 
 <head>
-    <title> Register | Book Planet </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title> Register | Book Planet </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" type="text/javascript"></script>
 
+<style>
+:root {
+--input-padding-x: 1.5rem;
+--input-padding-y: .75rem;
+}
 
+body {
+background: #007bff;
+background: linear-gradient(to right, #0062E6, #33AEFF);
+}
 
-    <style>
-        * {
-            box-sizing: border-box
-        }
+.card-signin {
+border: 0;
+border-radius: 1rem;
+box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+overflow: hidden;
+}
 
-        /* Add padding to containers */
-        .container {
-            padding: 16px;
-        }
+.card-signin .card-title {
+margin-bottom: 2rem;
+font-weight: 300;
+font-size: 1.5rem;
+}
 
-        /* Full-width input fields */
-        input[type=text],
-        input[type=password] {
-            width: 100%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
-            display: inline-block;
-            border: none;
-            background: #f1f1f1;
-        }
+.card-signin .card-img-left {
+width: 45%;
+/* Link to your background image using in the property below! */
+background: scroll center url('images/register-banner.png');
+background-size: cover;
+}
 
-        input[type=text]:focus,
-        input[type=password]:focus {
-            background-color: #ddd;
-            outline: none;
-        }
+.card-signin .card-body {
+padding: 2rem;
+}
 
-        /* Overwrite default styles of hr */
-        hr {
-            border: 1px solid #f1f1f1;
-            margin-bottom: 25px;
-        }
+.form-signin {
+width: 100%;
+}
 
-        /* Set a style for the submit/register button */
-        .registerbtn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 16px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            opacity: 0.9;
-        }
+.form-signin .btn {
+font-size: 80%;
+border-radius: 5rem;
+letter-spacing: .1rem;
+font-weight: bold;
+padding: 1rem;
+transition: all 0.2s;
+}
 
-        .registerbtn:hover {
-            opacity: 1;
-        }
+.form-label-group {
+position: relative;
+margin-bottom: 1rem;
+}
 
-        /* Add a blue text color to links */
-        a {
-            color: dodgerblue;
-        }
+.form-label-group input {
+height: auto;
+border-radius: 2rem;
+}
 
-        /* Set a grey background color and center the text of the "sign in" section */
-        .signin {
-            background-color: #f1f1f1;
-            text-align: center;
-        }
-    </style>
+.form-label-group>input,
+.form-label-group>label {
+padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+.form-label-group>label {
+position: absolute;
+top: 0;
+left: 0;
+display: block;
+width: 100%;
+margin-bottom: 0;
+/* Override default `<label>` margin */
+line-height: 1.5;
+color: #495057;
+border: 1px solid transparent;
+border-radius: .25rem;
+transition: all .1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+color: transparent;
+}
+
+.form-label-group input::placeholder {
+color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown)~label {
+padding-top: calc(var(--input-padding-y) / 3);
+padding-bottom: calc(var(--input-padding-y) / 3);
+font-size: 12px;
+color: #777;
+}
+
+.btn-google {
+color: white;
+background-color: #ea4335;
+}
+
+.btn-facebook {
+color: white;
+background-color: #3b5998;
+}
+</style>
+
 
 </head>
 
 
 <body>
 
-	<div class="conatiner-fluid">
-		<form action="registered.php" method="post">
-				<div class="container-fluid">
-						<div class="row">
-								<div class="col-md-3">
+  <div class="container">
+     <div class="row">
+       <div class="col-lg-10 col-xl-9 mx-auto">
+         <div class="card card-signin flex-row my-5">
+           <div class="card-img-left d-none d-md-flex">
+              <!-- Background image for card set in CSS! -->
+           </div>
+           <div class="card-body">
+             <h5 class="card-title text-center">Register To Book Planet</h5>
+             <form class="form-signin" action="registered.php" method="post">
+               <div class="form-label-group">
+                 <input type="text" id="inputfirstname" class="form-control" placeholder="Enter First Name" name="fname" required autofocus>
+                 <label for="inputfirstname">First Name</label>
+               </div>
+               <div class="form-label-group">
+                 <input type="text" id="inputlastname" class="form-control" placeholder="Enter Last Name" name="lname" required autofocus>
+                 <label for="inputlastname">Last Name</label>
+               </div>
 
-								</div>
-								<div class="col-md-6 container-fluid mt-4 pl-5 pr-5">
-                    <hr>
-										<center>
-                      <h1>Register To Book Planet</h1>
-  										<p>Please fill in this form to create an account.</p>
-                    </center>
-										<hr>
+               <div class="form-label-group">
+                 <input type="text" id="inputEmail" class="form-control" placeholder="Email address" name="mail" required>
+                 <label for="inputEmail">Email address</label>
+               </div>
 
-										<div class="row">
-                      <div class="col">
-                        <label><b>First Name</b></label>
-    										<input type="text" placeholder="Enter First Name" name="fname" required>
+               <hr>
 
-                      </div>
-                      <div class="col">
-    										<label><b>Last Name</b></label>
-    										<input type="text" placeholder="Last Name" name="lname" required>
-                      </div>
+               <div class="form-label-group">
+                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="psw" required>
+                 <label for="inputPassword">Password</label>
+               </div>
 
-                    </div>
-										<label><b>Email</b></label>
-										<input type="text" placeholder="Enter Email" name="mail" required>
+               <div class="form-label-group">
+                 <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" name="psw-repeat" required>
+                 <label for="inputConfirmPassword">Confirm password</label>
+               </div>
 
-                    <div class="row">
-                      <div class="col">
-                        <label><b>Password</b></label>
-    										<input type="password" placeholder="Enter Password" name="psw" required>
-                      </div>
-                      <div class="col">
-                        <label for="psw-repeat"><b>Repeat Password</b></label>
-    										<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-                      </div>
-                    </div>
-
-										<hr>
-										<button type="submit" class="registerbtn mb-3">Register</button>
-                    <div class="container signin">
-            						<h5>Already have an account? <a href="index.php">Sign in</a>.</h5>
-            				</div>
-
-								</div>
-								<div class="col-md-3">
-
-								</div>
-
-						</div>
-
-				</div>
-
-		</form>
-
-	</div>
+               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit"><i class="fas fa-user-plus mr-2"></i>Register</button>
+             </form>
+             <div class="form-signin">
+               <hr class="my-4">
+               <button onclick="window.location.href = 'index.php';" class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fas fa-sign-in-alt mr-2"></i> Login</button>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
