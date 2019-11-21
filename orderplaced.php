@@ -93,111 +93,273 @@ $conn = mysqli_connect("localhost","root","","shop");
 <head>
 	<title> Book Planet | Order Details </title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 
+  <div id="invoice" class="container mb-4" style="border:2px #1515a2 solid;">
 
-  <div class="container">
-    <div class="card-header">
-        <h3 class="text-xs-center"><strong> <center> Book Planet Invoice <center></strong></h3>
-    </div>
-    <div class="row mb-5 mt-3">
-        <div class="col-md-12">
-            <div class="card ">
-                <div class="card-header">
-                    <h3 class="text-xs-center"><strong>Shipping Address</strong></h3>
-                </div>
-                <div class="card-block">
-                    <div class="table-responsive">
-                        <table class="table table-sm">
-                            <thead>
-                                <tr>
-                                    <td><strong>SI No.</strong></td>
-                                    <td class="text-xs-center"><strong>Info</strong></td>
-                                    <td class="text-xs-center"><strong>Detail</strong></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>01</td>
-                                    <td class="text-xs-center">Name</td>
-                                    <td class="text-xs-center"><?php echo $firstname ?>&nbsp;<?php echo $lastname ?></td>
-                                </tr>
-                                <tr>
-                                    <td>02</td>
-                                    <td class="text-xs-center">Email</td>
-                                    <td class="text-xs-center"><?php echo $email?></td>
-                                </tr>
-                                <tr>
-                                    <td>03</td>
-                                    <td class="text-xs-center">Address</td>
-                                    <td class="text-xs-center"><?php echo $add1?>, <?php echo $add2?> , <?php echo $city?> , <?php echo $state?>, <?php echo $pin?></td>
-                                </tr>
-                                <tr>
-                                    <td>04</td>
-                                    <td class="text-xs-center">Phone</td>
-                                    <td class="text-xs-center"><?php echo $number?></td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card ">
-                <div class="card-header">
-                    <h3 class="text-xs-center"><strong>Book Order summary</strong></h3>
-                </div>
-                <div class="card-block">
-                    <div class="table-responsive">
-                        <table class="table table-sm">
-                            <thead>
-                                <tr>
-                                    <td><strong>Book Name</strong></td>
-                                    <td class="text-xs-center"><strong>Book Price</strong></td>
-                                    <td class="text-xs-center"><strong>Book Quantity</strong></td>
-                                    <td class="text-xs-right"><strong>Total</strong></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><?php echo $bookname?></td>
-                                    <td class="text-xs-center">Rs.<?php echo $amount?>.00</td>
-                                    <td class="text-xs-center">01</td>
-                                    <td class="text-xs-right">Rs.<?php echo $amount?>.00</td>
-                                </tr>
-
-                                <tr>
-                                    <td class="highrow"></td>
-                                    <td class="highrow"></td>
-                                    <td class="highrow text-xs-center"><strong>Subtotal</strong></td>
-                                    <td class="highrow text-xs-right">Rs.<?php echo $amount?>.00</td>
-                                </tr>
-                                <tr>
-                                    <td class="emptyrow"></td>
-                                    <td class="emptyrow"></td>
-                                    <td class="emptyrow text-xs-center"><strong>Shipping</strong></td>
-                                    <td class="emptyrow text-xs-right">Rs. 00.00</td>
-                                </tr>
-                                <tr>
-                                    <td class="emptyrow"><i class="fa fa-barcode iconbig"></i></td>
-                                    <td class="emptyrow"></td>
-                                    <td class="emptyrow text-xs-center"><strong>Total</strong></td>
-                                    <td class="emptyrow text-xs-right">Rs.<?php echo $amount?>.00</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+      <div class="invoice overflow-auto">
+          <div style="min-width: 600px">
+              <header>
+                  <div class="row">
+                      <div class="col">
+                        <img src="images/logo-bookplanet.png" data-holder-rendered="true" style="max-height:85px;"/>
+                      </div>
+                      <div class="col company-details">
+                          <h2 class="name" style="color:#1515a2;">
+                            Book Planet Zone
+                          </h2>
+                          <div>Sir M. Visvesvaraya Institute Of Technology</div>
+                          <div>hello@bookplanet.ml</div>
+                      </div>
+                  </div>
+              </header>
+              <main>
+                  <div class="row contacts">
+                      <div class="col invoice-to">
+                          <div class="text-gray-light">INVOICE TO:</div>
+                          <h2 class="to"><?php echo $firstname ?>&nbsp;<?php echo $lastname ?></h2>
+                          <div class="address">+91 <?php echo $number?></div>
+                          <div class="address"><?php echo $add1?>, <?php echo $add2?> , <?php echo $city?> , <?php echo $state?>, <?php echo $pin?></div>
+                          <div class="email"><a href="mailto:john@example.com"><?php echo $email?></a></div>
+                      </div>
+                      <div class="col invoice-details">
+                          <h1 class="invoice-id">INVOICE B-P-I</h1>
+                          <div class="date">Date of Invoice: <?php echo date("d/m/Y") ?></div>
+                          <div class="date">Due Date: <?php echo date('d/m/Y', strtotime(' + 10 days')); ?></div>
+                      </div>
+                  </div>
+                  <table border="0" cellspacing="0" cellpadding="0">
+                      <thead>
+                          <tr>
+                              <th>#</th>
+                              <th class="text-left">BOOK Name</th>
+                              <th class="text-right">PRICE</th>
+                              <th class="text-right">QUANTITY</th>
+                              <th class="text-right">TOTAL</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td class="no">01</td>
+                              <td class="text-left"><h3>
+                                  <a> <?php echo $bookname?> </a>
+                                  </h3>
+                              </td>
+                              <td class="unit">Rs.<?php echo $amount?>.00</td>
+                              <td class="qty">01</td>
+                              <td class="total">Rs.<?php echo $amount?>.00</td>
+                          </tr>
+                      </tbody>
+                      <tfoot>
+                          <tr>
+                              <td colspan="2"></td>
+                              <td colspan="2">SUBTOTAL</td>
+                              <td>Rs.<?php echo $amount?>.00</td>
+                          </tr>
+                          <tr>
+                              <td colspan="2"></td>
+                              <td colspan="2">SHIPPING</td>
+                              <td>Rs. 00.00</td>
+                          </tr>
+                          <tr>
+                              <td colspan="2"></td>
+                              <td colspan="2">GRAND TOTAL</td>
+                              <td>Rs.<?php echo $amount?>.00</td>
+                          </tr>
+                      </tfoot>
+                  </table>
+                  <div class="thanks">Thank you!</div>
+                  <div class="notices">
+                      <div>NOTICE:</div>
+                      <div class="notice">Expect delivery within a week at your address. Kindly check your email and sms for tracking deatils.</div>
+                  </div>
+              </main>
+              <footer>
+                <center class="mt-3 mb-3">
+                  <div id="editor"></div>
+                <button onclick="printPage()" class="btn btn-warning">Print as PDF</button>
+                <a class="btn btn-outline-info" href="welcome.php" role="button">Back To Home</a>
+                  </center>
+                  Invoice was created on a computer and is valid without the signature and seal.
+              </footer>
+          </div>
+          <!--DO NOT DELETE THIS div. IT is responsible for showing footer always at the bottom-->
+          <div></div>
+      </div>
+  </div>
 </div>
+
+<style media="screen">
+#invoice{
+  padding: 30px;
+}
+
+.invoice {
+  position: relative;
+  background-color: #FFF;
+  min-height: 680px;
+  padding: 15px
+}
+
+.invoice header {
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #3989c6
+}
+
+.invoice .company-details {
+  text-align: right
+}
+
+.invoice .company-details .name {
+  margin-top: 0;
+  margin-bottom: 0
+}
+
+.invoice .contacts {
+  margin-bottom: 20px
+}
+
+.invoice .invoice-to {
+  text-align: left
+}
+
+.invoice .invoice-to .to {
+  margin-top: 0;
+  margin-bottom: 0
+}
+
+.invoice .invoice-details {
+  text-align: right
+}
+
+.invoice .invoice-details .invoice-id {
+  margin-top: 0;
+  color: #3989c6
+}
+
+.invoice main {
+  padding-bottom: 50px
+}
+
+.invoice main .thanks {
+  margin-top: -100px;
+  font-size: 2em;
+  margin-bottom: 50px
+}
+
+.invoice main .notices {
+  padding-left: 6px;
+  border-left: 6px solid #3989c6
+}
+
+.invoice main .notices .notice {
+  font-size: 1.2em
+}
+
+.invoice table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 20px
+}
+
+.invoice table td,.invoice table th {
+  padding: 15px;
+  background: #eee;
+  border-bottom: 1px solid #fff
+}
+
+.invoice table th {
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 16px
+}
+
+.invoice table td h3 {
+  margin: 0;
+  font-weight: 400;
+  color: #3989c6;
+  font-size: 1.2em
+}
+
+.invoice table .qty,.invoice table .total,.invoice table .unit {
+  text-align: right;
+  font-size: 1.2em
+}
+
+.invoice table .no {
+  color: #fff;
+  font-size: 1.6em;
+  background: #3989c6
+}
+
+.invoice table .unit {
+  background: #ddd
+}
+
+.invoice table .total {
+  background: #3989c6;
+  color: #fff
+}
+
+.invoice table tbody tr:last-child td {
+  border: none
+}
+
+.invoice table tfoot td {
+  background: 0 0;
+  border-bottom: none;
+  white-space: nowrap;
+  text-align: right;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-top: 1px solid #aaa
+}
+
+.invoice table tfoot tr:first-child td {
+  border-top: none
+}
+
+.invoice table tfoot tr:last-child td {
+  color: #3989c6;
+  font-size: 1.4em;
+  border-top: 1px solid #3989c6
+}
+
+.invoice table tfoot tr td:first-child {
+  border: none
+}
+
+.invoice footer {
+  width: 100%;
+  text-align: center;
+  color: #777;
+  border-top: 1px solid #aaa;
+  padding: 8px 0
+}
+
+@media print {
+  .invoice {
+      font-size: 11px!important;
+      overflow: hidden!important
+  }
+
+  .invoice footer {
+      position: absolute;
+      bottom: 10px;
+      page-break-after: always
+  }
+
+  .invoice>div:last-child {
+      page-break-before: always
+  }
+}
+</style>
 
 <style>
 .height {
@@ -228,15 +390,10 @@ $conn = mysqli_connect("localhost","root","","shop");
 </style>
 
 
-<center class="mt-3 mb-3">
-  <div id="editor"></div>
-<button onclick="printPage()" class="btn btn-warning">Print as PDF</button>
-<a class="btn btn-outline-info" href="welcome.php" role="button">Back To Home</a>
-  </center>
 </body>
-</html>
 <script>
         function printPage() {
             window.print();
         }
 </script>
+</html>
