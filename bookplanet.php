@@ -113,7 +113,7 @@ $uid=$row["user_id"];
                   <a href="single.php?username=<?php echo $username ?>&bookid=1" class="link-product-add-cart text-dark">Arias
                   </a>
                 </h5>
-                <p class="small text-muted font-italic">Following her recent Odes, the Pulitzer Prize-winning poet Sharon Olds gives us radical new poems of intimate life and political conscience, of race and class and a mother's violence.
+                <p class="small text-muted font-italic">By : Sharon Olds.</p>
                 </p>
                 <ul class="list-inline small">
                   <li class="list-inline-item m-0">
@@ -166,7 +166,7 @@ $uid=$row["user_id"];
                   <a href="single.php?username=<?php echo $username ?>&bookid=2" class="link-product-add-cart text-dark">Poemsia
                   </a>
                 </h5>
-                <p class="small text-muted font-italic">From award-winning author and poet Lang Leav a mysterious book, Poemsia, she finds herself suddenly thrust into the dizzying world of social media stardom, where poets are the new rock stars.
+                <p class="small text-muted font-italic">By : Lang Leav.</p>
                 <ul class="list-inline small">
                   <li class="list-inline-item m-0">
                     <i class="fa fa-star text-success">
@@ -218,7 +218,7 @@ $uid=$row["user_id"];
                   <a href="single.php?username=<?php echo $username ?>&bookid=3" class="link-product-add-cart text-dark">I'm Rising
                   </a>
                 </h5>
-                <p class="small text-muted font-italic">Bestselling author Michelle Stradford follows “I'm Rising: Determined. Confident. Powerful.” tells an emotive journey of empowerment through life’s countless triumphs and tribulations.
+                <p class="small text-muted font-italic">By : Michelle Stradford.</p>
                   <li class="list-inline-item m-0">
                     <i class="fa fa-star text-success">
                     </i>
@@ -251,7 +251,7 @@ $uid=$row["user_id"];
                     <input type="hidden" name="username" value=
                            <?php echo $username?>>
                     <input type="hidden" name="bookid" value=3>
-                    <input type="submit" name="submit" value="Buy Now" class="mb-3 ml-5 btn btn-primary navbar-btn" />
+                    <input type="submit" name="submit" value="Buy Now" class="mb-3 ml-5 btn btn-primary navbar-btn" style="margin-top:9px;" />
                   </fieldset>
                 </form>
               </div>
@@ -269,7 +269,8 @@ $uid=$row["user_id"];
                   <a href="single.php?username=<?php echo $username ?>&bookid=4" class="link-product-add-cart text-dark">Hull
                   </a>
                 </h5>
-                <p class="small text-muted font-italic">Hull by African American poet Xandria Phillips explores the present-day emotional impacts of enslavement and colonization on the Black queer body in urban, rural, and international settings.
+
+                <p class="small text-muted font-italic">By : Xandria Phillips.</p>
                 <ul class="list-inline small">
                   <li class="list-inline-item m-0">
                     <i class="fa fa-star text-success">
@@ -303,7 +304,7 @@ $uid=$row["user_id"];
                     <input type="hidden" name="username" value=
                            <?php echo $username?>>
                     <input type="hidden" name="bookid" value=4>
-                    <input type="submit" name="submit" value="Buy Now" class="mb-3 ml-5 btn btn-primary navbar-btn" />
+                    <input type="submit" name="submit" value="Buy Now" class="mb-3 ml-5 btn btn-primary navbar-btn" style="margin-top:-8px;" />
                   </fieldset>
                 </form>
               </div>
