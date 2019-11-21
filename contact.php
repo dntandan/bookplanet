@@ -3,60 +3,78 @@
 
 <head>
 	<title>Book Planet | Contact Us</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 
-	<!-- Meta tag Keywords -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8" />
-	<meta name="keywords" content="Electro Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
-	/>
 
-	<style>
-	.round-img
-	{
-
-		border-radius: 50%;
-
-		height: 100;
-
-		width: 100;
-	}
-
-	 /* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+	<style media="screen">
+	.border-md {
+	border-width: 2px;
 }
 
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.btn-facebook {
+	background: #405D9D;
+	border: none;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-    background-color: #45a049;
+.btn-facebook:hover, .btn-facebook:focus {
+	background: #314879;
 }
 
-/* Add a background color and some padding around the form */
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
+.btn-twitter {
+	background: #42AEEC;
+	border: none;
 }
 
-</style>
+.btn-twitter:hover, .btn-twitter:focus {
+	background: #1799e4;
+}
+
+
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+
+body {
+	min-height: 100vh;
+}
+
+.form-control:not(select) {
+	padding: 1.5rem 0.5rem;
+}
+
+select.form-control {
+	height: 52px;
+	padding-left: 0.5rem;
+}
+
+.form-control::placeholder {
+	color: #ccc;
+	font-weight: bold;
+	font-size: 0.9rem;
+}
+.form-control:focus {
+	box-shadow: none;
+}
+	</style>
+	<script type="text/javascript">
+	$(function () {
+	$('input, select').on('focus', function () {
+			$(this).parent().find('.input-group-text').css('border-color', '#80bdff');
+	});
+	$('input, select').on('blur', function () {
+			$(this).parent().find('.input-group-text').css('border-color', '#ced4da');
+	});
+});
+	</script>
+
 	<script>
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -66,196 +84,109 @@ input[type=submit]:hover {
 			window.scrollTo(0, 1);
 		}
 	</script>
-	<!-- //Meta tag Keywords -->
-
-	<!-- Custom-Files -->
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- Bootstrap css -->
-	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- Main css -->
-	<link rel="stylesheet" href="css/fontawesome-all.css">
-	<!-- Font-Awesome-Icons-CSS -->
-	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- pop-up-box -->
-	<link href="css/menu.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- menu style -->
-	<!-- //Custom-Files -->
-
-	<!-- web fonts -->
-	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
-	    rel="stylesheet">
-	<!-- //web fonts -->
 
 </head>
 
+
+
+
+
+
+
+
 <body>
-	<br>
-	 <div class="row">
-	 	<div class="col-xl-4">
 
-	 	</div>
-		<div class="col-xl-4">
-
-				<div class="card-header mb-3 mt-3" style="background-color:#1fdbb4 !important;">
-						<h3 class="text-xs-center"><strong> <center> Contact Book Planet <center></strong></h3>
-				</div>
-			<div class="container">
-	   <form action="querysent.php" method="post">
-
-	     <label for="fname">First Name: </label>
-	     <input type="text" id="fullname" name="fullname" placeholder="Enter your name">
-
-	     <label for="lname">E-mail: </label>
-	     <input type="text" id="mail" name="mail" placeholder="Enter your e-mail">
+	<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light py-3">
+        <div class="container">
+            <!-- Navbar Brand -->
+            <a href="#" class="navbar-brand">
+                <img src="images/logo-bookplanet.png" alt="logo" width="230">
+            </a>
+        </div>
+    </nav>
+</header>
 
 
+<div class="container">
+    <div class="row py-3 align-items-center">
+        <!-- For Demo Purpose -->
+        <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
+            <img src="images/query.svg" alt="" class="img-fluid mb-3 d-none d-md-block">
+            <center><h1>Ask your query!</h1></center>
 
-	     <label for="subject">Query: </label>
-	     <textarea id="query" name="query" placeholder="Write your query here..." style="height:200px"></textarea>
+        </div>
 
-	    <center> <input type="submit" value="Submit Your Query" class="mt-3 mb-2"> </center>
-	    <center><a class="btn btn-outline-info" href="welcome.php" role="button">Back To Home</a></center>
+        <!-- Registeration Form -->
+        <div class="col-md-7 col-lg-6 ml-auto">
+            <form action="querysent.php" method="post">
+                <div class="row">
 
-	   </form>
-	 </div>
+                    <!-- First Name -->
+                    <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-user text-muted"></i>
+                            </span>
+                        </div>
+                        <input id="firstName" type="text" name="fullname" placeholder="Full Name" class="form-control bg-white border-left-0 border-md">
+                    </div>
 
-		</div>
-		<div class="col-xl-4">
 
-	 	</div>
-	 </div>
+                    <!-- Email Address -->
+                    <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-envelope text-muted"></i>
+                            </span>
+                        </div>
+                        <input id="email" type="email" name="mail" placeholder="Email Address" class="form-control bg-white border-left-0 border-md">
+                    </div>
 
-</body>
-	<!-- //copyright -->
 
-	<!-- js-files -->
-	<!-- jquery -->
-	<script src="js/jquery-2.2.3.min.js"></script>
-	<!-- //jquery -->
+										<!-- Query Name -->
+                    <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-black-tie text-muted"></i>
+                            </span>
+                        </div>
+                        <textarea rows="4" id="firstName" type="text" name="query" placeholder="Enter your query" class="form-control bg-white border-left-0 border-md"></textarea>
+                    </div>
 
-	<!-- nav smooth scroll -->
-	<script>
-		$(document).ready(function () {
-			$(".dropdown").hover(
-				function () {
-					$('.dropdown-menu', this).stop(true, true).slideDown("fast");
-					$(this).toggleClass('open');
-				},
-				function () {
-					$('.dropdown-menu', this).stop(true, true).slideUp("fast");
-					$(this).toggleClass('open');
-				}
-			);
-		});
-	</script>
-	<!-- //nav smooth scroll -->
 
-	<!-- popup modal (for location)-->
-	<script src="js/jquery.magnific-popup.js"></script>
-	<script>
-		$(document).ready(function () {
-			$('.popup-with-zoom-anim').magnificPopup({
-				type: 'inline',
-				fixedContentPos: false,
-				fixedBgPos: true,
-				overflowY: 'auto',
-				closeBtnInside: true,
-				preloader: false,
-				midClick: true,
-				removalDelay: 300,
-				mainClass: 'my-mfp-zoom-in'
-			});
 
-		});
-	</script>
-	<!-- //popup modal (for location)-->
 
-	<!-- cart-js -->
-	<script src="js/minicart.js"></script>
-	<script>
-		paypals.minicarts.render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
 
-		paypals.minicarts.cart.on('checkout', function (evt) {
-			var items = this.items(),
-				len = items.length,
-				total = 0,
-				i;
 
-			// Count the number of each item in the cart
-			for (i = 0; i < len; i++) {
-				total += items[i].get('quantity');
-			}
-		});
-	</script>
-	<!-- //cart-js -->
+                    <!-- Submit Button -->
+                    <div class="form-group col-lg-12 mx-auto mb-0">
+											<center> <input type="submit" value="Submit Your Query" class="btn btn-primary btn-block py-2"> </center>
+                    </div>
 
-	<!-- password-script -->
-	<script>
-		window.onload = function () {
-			document.getElementById("password1").onchange = validatePassword;
-			document.getElementById("password2").onchange = validatePassword;
-		}
+                    <!-- Divider Text -->
+                    <div class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
+                        <div class="border-bottom w-100 ml-5"></div>
+                        <span class="px-2 small text-muted font-weight-bold text-muted">OR</span>
+                        <div class="border-bottom w-100 mr-5"></div>
+                    </div>
 
-		function validatePassword() {
-			var pass2 = document.getElementById("password2").value;
-			var pass1 = document.getElementById("password1").value;
-			if (pass1 != pass2)
-				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
-			else
-				document.getElementById("password2").setCustomValidity('');
-			//empty string means no validation error
-		}
-	</script>
-	<!-- //password-script -->
+                    <!-- Social Login -->
+                    <div class="form-group col-lg-12 mx-auto">
+                        <a href="welcome.php" class="btn btn-primary btn-block py-2 btn-facebook">
+                            <i class="fa fa-home mr-2"></i>
+                            <span class="font-weight-bold">Back To Home</span>
+                        </a>
+                    </div>
 
-	<!-- scroll seller -->
-	<script src="js/scroll.js"></script>
-	<!-- //scroll seller -->
 
-	<!-- smoothscroll -->
-	<script src="js/SmoothScroll.min.js"></script>
-	<!-- //smoothscroll -->
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
-	<!-- start-smooth-scrolling -->
-	<script src="js/move-top.js"></script>
-	<script src="js/easing.js"></script>
-	<script>
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
 
-				$('html,body').animate({
-					scrollTop: $(this.hash).offset().top
-				}, 1000);
-			});
-		});
-	</script>
-	<!-- //end-smooth-scrolling -->
-
-	<!-- smooth-scrolling-of-move-up -->
-	<script>
-		$(document).ready(function () {
-			/*
-			var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear'
-			};
-			*/
-			$().UItoTop({
-				easingType: 'easeOutQuart'
-			});
-
-		});
-	</script>
-	<!-- //smooth-scrolling-of-move-up -->
-
-	<!-- for bootstrap working -->
-	<script src="js/bootstrap.js"></script>
-	<!-- //for bootstrap working -->
-	<!-- //js-files -->
 </body>
 
 </html>
