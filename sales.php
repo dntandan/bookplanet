@@ -79,648 +79,546 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="zxx">
-
-<head>
-	<title>Book Planet | Online Book Store</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-	<!-- Meta tag Keywords -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8" />
-	<meta name="keywords" content="Electro Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
-	/>
-
-	<style>
-
-	h2 {
-    border: 1px solid powderblue;
-    padding: 30px;
-
-
-
-
-
-
-
-
-    margin: 50px;
-}
-	.round-img
-	{
-
-		border-radius: 50%;
-
-		height: 100;
-
-		width: 100;
-	}
-
-</style>
-	<script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
-
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-	</script>
-	<!-- //Meta tag Keywords -->
-
-	<!-- Custom-Files -->
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- Bootstrap css -->
-	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- Main css -->
-	<link rel="stylesheet" href="css/fontawesome-all.css">
-	<!-- Font-Awesome-Icons-CSS -->
-	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- pop-up-box -->
-	<link href="css/menu.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- menu style -->
-	<!-- //Custom-Files -->
-
-	<!-- web fonts -->
-	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
-	    rel="stylesheet">
-	<!-- //web fonts -->
-
-</head>
-
-<body>
-	<!-- top-header -->
-  <div class="agile-main-top">
-      <div class="container-fluid">
-          <div class="row main-top-w3l py-2">
-              <div class="col-lg-4 header-most-top">
-                  <!--<p class="text-white text-lg-left text-center">Offer Zone Top Deals & Discounts
-          <i class="fas fa-shopping-cart ml-1"></i>
-        </p>-->
-              </div>
-              <div class="col-lg-8 header-right mt-lg-0 mt-2">
-                  <!-- header lists -->
-                  <ul>
-                      <!--<li class="text-center border-right text-white">
-            <a class="play-icon popup-with-zoom-anim text-white" href="#small-dialog1">
-              <i class="fas fa-map-marker mr-2"></i>Select Location</a>
-          </li>-->
-                      <li class="text-center border-right text-white">
-                          <a href="#" data-toggle="modal" data-target="#exampleModal" class="text-white">
-                              <!--<i class="fas fa-truck mr-2"></i>Track Order</a>-->
-                      </li>
-                      <!--<li class="text-center border-right text-white">
-            <i class="fas fa-phone mr-2"></i>
-          </li>-->
-
-                      <li class="text-center text-white">
-                          <a href="#" data-toggle="modal" data-target="#exampleModal2" class="text-white">
-                              <!--<i class="fas fa-sign-out-alt mr-2"></i>Register </a>-->
-                      </li>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin | Book Planet</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="dashboard/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="dashboard/vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Google fonts - Poppins-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600">
+    <!-- Lightbox-->
+    <link rel="stylesheet" href="dashboard/vendor/lightbox2/css/lightbox.css">
+    <!-- Custom font icons-->
+    <link rel="stylesheet" href="dashboard/css/fontastic.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="dashboard/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="dashboard/css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="dashboard/img/favicon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="css/fontawesome-all.css">
 
 
-                      <li class="text-center text-white">
-                          <!--<a href="#" data-toggle="modal" data-target="#exampleModal" class="text-white">-->
-                          <i class="fas fa-sign-in-alt mr-2"></i>Welcome, dntandan
-                      </li>
 
-                  </ul>
-                  <!-- //header lists -->
-              </div>
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="dashboard/https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="dashboard/https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container"><a href="bookplanet.php" class="navbar-brand"><img src="images/logo-bookplanet.png" alt="" class="img-fluid"></a>
+          <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">Menu<i class="fa fa-bars ml-2"></i></button>
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <!-- Link-->
+              <li class="nav-item" > <a href="index.html" class="nav-link active" style="color:#e7475e!important;"><i class="fas fa-sign-in-alt mr-2">
+              </i>Welcome To Admin Panel,
+              dntandan </a></li>
+          </ul><a href="contact.php"  class="btn btn-primary navbar-btn ml-0 ml-lg-3">Contact </a>
+        </ul><a href="index.php"  class="btn btn-primary navbar-btn ml-0 ml-lg-3">Logout </a>
           </div>
-      </div>
-  </div>
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title text-center">Log In</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
+        </div>
+      </nav>
+    </header>
+    <!-- Hero Section-->
+    <section class="hero">
+      <div class="container mb-5">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <h1 class="hero-heading mb-0">Online Book <br> Store</h1>
+            <div class="row">
+              <div class="col-lg-10">
+                <p class="lead text-muted mt-4 mb-4">Shop books online and get it delivered across the planet. No hidden charges.</p>
               </div>
-              <div class="modal-body">
-                  <form action="checkout.php" method="post">
-                      <div class="form-group">
-                          <label class="col-form-label">E-mail</label>
-                          <input type="text" class="form-control" placeholder=" " name="email" required="">
-                      </div>
-                      <div class="form-group">
-                          <label class="col-form-label">Password</label>
-                          <input type="password" class="form-control" placeholder=" " name="pw" required="">
-                      </div>
-                      <div class="right-w3l">
-                          <input type="submit" class="form-control" value="Log in">
-                      </div>
-                      <div class="sub-w3l">
-                          <div class="custom-control custom-checkbox mr-sm-2">
-                              <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-                              <label class="custom-control-label" for="customControlAutosizing">Remember me?</label>
-                          </div>
-                      </div>
-                      <p class="text-center dont-do mt-3">Don't have an account?
-                          <a href="#" data-toggle="modal" data-target="#exampleModal2">
-                              Register Now</a>
-                      </p>
-                  </form>
-              </div>
+            </div>
           </div>
+          <div class="col-lg-7"><img src="images/bp-globe.png" alt="..." class="hero-image img-fluid d-none d-lg-block"></div>
+        </div>
       </div>
-  </div>
-
-  <!-- navigation -->
+    </section>
 
 
-  <div class="navbar-inner">
-      <div class="container">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <!-- bOOKS list -->
+    <!-- top Products -->
+    <div class="ads-grid py-sm-5 py-4" style="margin-top:-6%">
+      <div class="container py-5">
+        <!-- For Demo Purpose-->
+        <header class="text-center mb-5">
+          <h1 class="display-4 font-weight-bold">Admin Panel
+          </h1>
+          <p  class="font-italic text-muted mb-0">Report & Total Sales and Performance Record of Book Planet fetched from backend server.
+          </p>
+        </header>
 
 
-              <!--<div class="agileits-navi_search">
-        <form action="checkout.php" method="post">
-          <select id="agileinfo-nav_search" name="agileinfo_search" class="border" required="">
-            <option value="">All Categories</option>
-            <option value="Televisions">Televisions</option>
-            <option value="Headphones">Headphones</option>
-            <option value="Computers">Computers</option>
-            <option value="Appliances">Appliances</option>
-            <option value="Mobiles">Mobiles</option>
-            <option value="Fruits &amp; Vegetables">Tv &amp; Video</option>
-            <option value="iPad & Tablets">iPad & Tablets</option>
-            <option value="Cameras & Camcorders">Cameras & Camcorders</option>
-            <option value="Home Audio & Theater">Home Audio & Theater</option>
-          </select>
-        </form>
-      </div>-->
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="col-md-3 logo_agile">
-                  <h1 class="text-center">
-                      <a href="welcome.php" class="font-weight-bold font-italic">
-                          <img src="images/logo-bookplanet.png" alt=" " class="img-fluid">
-                      </a>
-                  </h1>
-              </div>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ml-auto text-center mr-xl-5">
-										<li class="nav-item">
 
-											Welcome To Admin Panel Of BookPlanet ! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										</li>
-										<li class="nav-item">
+<!-- Start Admin Stats Details-->
 
-											<a href='index.php'>Logout </a>
-										</li>
-                  </ul>
-              </div>
-          </nav>
-      </div>
-  </div>
-  <!-- //navigation -->
-
-	<!-- banner -->
-
-	<!-- //navigation -->
-
-	<!-- banner-2 -->
-	<div class="page-head_agile_info_w3l" style="min-height: 475px!important;">
-
-	</div>
-	<!-- //banner-2 -->
-	<!-- page -->
-	<div class="services-breadcrumb">
-		<div class="agile_inner_breadcrumb">
-			<div class="container">
-				<ul class="w3_short">
-					<li>
-						<a href="welcome.php">Home</a>
-						<i>|</i>
-					</li>
-					<li>Admin Panel Report & Total sales and performance record of Book Planet</li>
-				</ul>
+<div class="px-4 px-lg-0">
+	<div class="row pb-5">
+		<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+			<!-- Card-->
+			<div class="card rounded shadow-sm border-0">
+				<div class="card-body p-5">
+					<i class="fas fa-cart-plus fa-4x mb-3 text-primary">
+					</i>
+					<h5>₹ <?php echo $sale ?>.00
+					</h5>
+					<p class="small pb-3 pt-1 text-muted font-italic">Total sales made this order cycle.
+					</p>
+					<div class="progress rounded-pill">
+						<div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 90%;" class="progress-bar rounded-pill">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+			<!-- Card -->
+			<div class="card rounded shadow-sm border-0">
+				<div class="card-body p-5">
+					<i class="fas fa-book fa-4x mb-3 text-success">
+					</i>
+					<h5><?php echo $totalsales ?>
+					</h5>
+					<p class="small pt-1 pb-3 text-muted font-italic">Total number of books sold.
+					</p>
+					<div class="progress rounded-pill">
+						<div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%;" class="progress-bar bg-success rounded-pill">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+			<!-- Card -->
+			<div class="card rounded shadow-sm border-0">
+				<div class="card-body p-5">
+					<i class="fas fa-rupee-sign fa-4x mb-3 text-info">
+					</i>
+					<h5><?php echo $currentsales ?>
+					</h5>
+					<p class="small pb-3 pt-1 text-muted font-italic">Current active orders in Book Planet.
+					</p>
+					<div class="progress rounded-pill">
+						<div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" class="progress-bar bg-info rounded-pill">
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-	<!-- //page -->
+	<div class="row pb-5">
+		<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+		<div class="card rounded shadow-sm border-0">
+			<div class="card-body p-5">
+				<i class="fas fa-user fa-4x mb-3 text-warning">
+				</i>
+				<h5><?php echo $customercount ?>
+				</h5>
+				<p class="small pb-3 pt-1 text-muted font-italic">Total number of customers.
+				</p>
+				<div class="progress rounded-pill">
+					<div role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;" class="progress-bar bg-warning rounded-pill">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+			<!-- Card -->
+			<div class="card rounded shadow-sm border-0">
+				<div class="card-body p-5">
+					<i class="fas fa-lock fa-4x mb-3 text-info">
+					</i>
+					<h5>01
+					</h5>
+					<p class="small pb-3 pt-1 text-muted font-italic">Total number of active admin.
+					</p>
+					<div class="progress rounded-pill">
+						<div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 100%;" class="progress-bar bg-info rounded-pill">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+			<!-- Card-->
+			<div class="card rounded shadow-sm border-0">
+				<div class="card-body p-5">
+					<i class="fab fa-facebook-messenger fa-4x mb-3 text-primary">
+					</i>
+					<h5><?php echo $queriescount ?>
+					</h5>
+					<p class="small pb-3 pt-1 text-muted font-italic">Unsolved queries from customers.
+					</p>
+					<div class="progress rounded-pill">
+						<div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 90%;" class="progress-bar rounded-pill">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row pb-5">
+		<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+			<!-- Card -->
+			<div class="card rounded shadow-sm border-0">
+				<div class="card-body p-5">
+					<i class="fas fa-bolt fa-4x mb-3 text-info">
+					</i>
+					<h5>16
+					</h5>
+					<p class="small pb-3 pt-1 text-muted font-italic">Total number of types of books .
+					</p>
+					<div class="progress rounded-pill">
+						<div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" class="progress-bar bg-info rounded-pill">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+			<!-- Card -->
+			<div class="card rounded shadow-sm border-0">
+				<div class="card-body p-5">
+					<i class="fas fa-list-alt fa-4x mb-3 text-success">
+					</i>
+					<h5><?php echo $totalsubcat ?>
+					</h5>
+					<p class="small pt-1 pb-3 text-muted font-italic">Total categories of books available.
+					</p>
+					<div class="progress rounded-pill">
+						<div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%;" class="progress-bar bg-success rounded-pill">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Card -->
+		<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+			<div class="card rounded shadow-sm border-0">
+				<div class="card-body p-5">
+					<i class="fas fa-check fa-4x mb-3 text-warning">
+					</i>
+					<h5><?php echo $stockcount ?>
+					</h5>
+					<p class="small pb-3 pt-1 text-muted font-italic">Total count of books in stock.
+					</p>
+					<div class="progress rounded-pill">
+						<div role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;" class="progress-bar bg-warning rounded-pill">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-	<div class="container mt-5">
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-            <div class="box">
-                <div class="icon">
-                    <div class="image"><i class="glyphicon glyphicon-list-alt btn-lg white fas fa-cart-plus"></i></div>
-                    <div class="info">
-                        <h4 class="title mt-3">₹ <?php echo $sale ?>.00</h4>
-                        <p>
-                            Total sales made this order cycle.
-                        </p>
 
-                    </div>
-                </div>
-                <div class="space"></div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-            <div class="box">
-                <div class="icon">
-                    <div class="image"><i class="glyphicon glyphicon-list-alt btn-lg white fas fa-book"></i></div>
-                    <div class="info">
-                        <h4 class="title mt-3"><?php echo $totalsales ?></h4>
-                        <p>
-                            Total number of books sold.
-                        </p>
-
-                    </div>
-                </div>
-                <div class="space"></div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-            <div class="box">
-                <div class="icon">
-                    <div class="image"><i class="glyphicon glyphicon-list-alt btn-lg white fas fa-rupee-sign"></i></div>
-                    <div class="info">
-                        <h4 class="title mt-3"><?php echo $currentsales ?></h4>
-                        <p>
-                            Current active orders.
-                        </p>
-
-                    </div>
-                </div>
-                <div class="space"></div>
-            </div>
-        </div>
-
-    </div>
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-            <div class="box">
-                <div class="icon">
-                    <div class="image"><i class="glyphicon glyphicon-list-alt btn-lg white fas fa-user"></i></div>
-                    <div class="info">
-                        <h4 class="title mt-3"><?php echo $customercount ?></h4>
-                        <p>
-                            Total number of customers.
-                        </p>
-
-                    </div>
-                </div>
-                <div class="space"></div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-            <div class="box">
-                <div class="icon">
-                    <div class="image"><i class="glyphicon glyphicon-list-alt btn-lg white fas fa-list-alt"></i></div>
-                    <div class="info">
-                        <h4 class="title mt-3"><?php echo $totalsubcat ?></h4>
-                        <p>
-                            Total categories of books available.
-                        </p>
-
-                    </div>
-                </div>
-                <div class="space"></div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-            <div class="box">
-                <div class="icon">
-                    <div class="image"><i class="glyphicon glyphicon-list-alt btn-lg white fab fa-facebook-messenger"></i></div>
-                    <div class="info">
-                        <h4 class="title mt-3"><?php echo $queriescount ?></h4>
-                        <p>
-                            Unsolved queries from customers.
-                        </p>
-
-                    </div>
-                </div>
-                <div class="space"></div>
-            </div>
-        </div>
-
-    </div>
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-            <div class="box">
-                <div class="icon">
-                    <div class="image"><i class="glyphicon glyphicon-list-alt btn-lg white fas fa-check"></i></div>
-                    <div class="info">
-                        <h4 class="title mt-3"><?php echo $stockcount ?></h4>
-                        <p>
-                            Total count of books in stock.
-                        </p>
-
-                    </div>
-                </div>
-                <div class="space"></div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-            <div class="box">
-                <div class="icon">
-                    <div class="image"><i class="glyphicon glyphicon-list-alt btn-lg white fas fa-bolt"></i></div>
-                    <div class="info">
-                        <h4 class="title mt-3">09</h4>
-                        <p>
-                          Total number of types of books .
-                        </p>
-
-                    </div>
-                </div>
-                <div class="space"></div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-            <div class="box">
-                <div class="icon">
-                    <div class="image"><i class="glyphicon glyphicon-list-alt btn-lg white fas fa-lock"></i></div>
-                    <div class="info">
-                        <h4 class="title mt-3">01</h4>
-                        <p>
-                            Total number of active admin.
-                        </p>
-
-                    </div>
-                </div>
-                <div class="space"></div>
-            </div>
-        </div>
-
-    </div>
 </div>
 
-<style>
-    .white {
-        color: white;
-    }
-
-    .btn-lg {
-        font-size: 38px;
-        line-height: 1.33;
-        border-radius: 6px;
-    }
-
-    .box > .icon {
-        text-align: center;
-        position: relative;
-    }
-
-    .box > .icon > .image {
-        position: relative;
-        z-index: 2;
-        margin: auto;
-        width: 88px;
-        height: 88px;
-        border: 7px solid white;
-        line-height: 88px;
-        border-radius: 50%;
-        background: #63B76C;
-        vertical-align: middle;
-    }
-
-    .box > .icon:hover > .image {
-        border: 4px solid black;
-    }
-
-    .box > .icon > .image > i {
-        font-size: 40px !important;
-        color: #fff !important;
-    }
-
-    .box > .icon:hover > .image > i {
-        color: white !important;
-    }
-
-    .box > .icon > .info {
-        margin-top: -24px;
-        background: rgba(0, 0, 0, 0.04);
-        border: 1px solid #e0e0e0;
-        padding: 15px 0 10px 0;
-    }
-
-        .box > .icon > .info > h3.title {
-            color: #222;
-            font-weight: 500;
-        }
-
-        .box > .icon > .info > p {
-            color: #666;
-            line-height: 1.5em;
-            margin: 20px;
-        }
-
-    .box > .icon:hover > .info > h3.title, .box > .icon:hover > .info > p, .box > .icon:hover > .info > .more > a {
-        color: #222;
-    }
-
-    .box > .icon > .info > .more a {
-        color: #222;
-        line-height: 12px;
-        text-transform: uppercase;
-        text-decoration: none;
-    }
-
-    .box > .icon:hover > .info > .more > a {
-        color: #000;
-        padding: 6px 8px;
-        border-bottom: 4px solid black;
-    }
-
-    .box .space {
-        height: 30px;
-    }
-</style>
-
-	<!-- middle section -->
-	<div class="join-w3l1 py-sm-5 py-4">
-		<div class="container py-xl-4 py-lg-2">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="join-agile text-left p-4">
-						<div class="row">
-							<div class="col-sm-7 offer-name">
-								<h4 class="mt-2 mb-3">“I often carry things to read so that I will not have to look at people.”</h4>
-								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Charles Bukowski</p>
-							</div>
-							<div class="col-sm-5 offerimg-w3l">
-								<img src="images/charles-b.jpg" alt="" class="img-fluid">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 mt-lg-0 mt-5">
-					<div class="join-agile text-left p-4">
-						<div class="row ">
-							<div class="col-sm-7 offer-name">
-								<h4 class="mt-2 mb-3">“A book worth reading is worth buying.”</h4>
-								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-John Ruskin</p>
-							</div>
-							<div class="col-sm-5 offerimg-w3l">
-								<img src="images/j-ruskin.jpg" style="max-height:245px;" alt="" class="img-fluid">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- middle section -->
-
-	<!-- footer -->
-	<footer>
-		<div class="footer-top-first">
-			<div class="container py-md-5 py-sm-4 py-3">
-				<!-- footer first section -->
+<!-- End Admin Stats Details-->
 
 
-				<!-- //footer first section -->
-				<!-- footer second section -->
-				<div class="row w3l-grids-footer border-top border-bottom py-sm-4 py-3">
-					<div class="col-md-4 offer-footer">
-						<div class="row">
-							<div class="col-4 icon-fot">
-								<i class="fas fa-dolly"></i>
-							</div>
-							<div class="col-8 text-form-footer">
-								<h3>Free Shipping</h3>
-								<p></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 offer-footer my-md-0 my-4">
-						<div class="row">
-							<div class="col-4 icon-fot">
-								<i class="fas fa-shipping-fast"></i>
-							</div>
-							<div class="col-8 text-form-footer">
-								<h3>Fast Delivery</h3>
-								<p>World Wide</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 offer-footer">
-						<div class="row">
-							<div class="col-4 icon-fot">
-								<i class="far fa-thumbs-up"></i>
-							</div>
-							<div class="col-8 text-form-footer">
-								<h3>Big Choice</h3>
-								<p>of Products</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- //footer second section -->
-			</div>
-		</div>
-		<!-- footer third section -->
-		<div class="w3l-middlefooter-sec">
-			<div class="container py-md-5 py-sm-4 py-3">
-				<div class="row footer-info w3-agileits-info">
-					<!-- footer categories -->
+      </div>
+
+    </div>
+
+    <!-- CLients Section-->
+    <section class="bg-gray">
+      <div class="container">  <!-- //top products -->
+        <!-- middle section -->
+        <div class="join-w3l1">
+
+          <div class="container py-xl-4 py-lg-2">
+            <!-- Third Row [Profiles]-->
+            <h2 class="font-weight-bold mb-2">Famous Quotes
+            </h2>
+            <p class="font-italic text-muted mb-4">Some of the famous quotes of novelist, writer eassyist and renowned persons.
+            </p>
+            <div class="row pb-5 mb-4">
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <!-- Card-->
+                <div class="card rounded shadow-sm border-0">
+                  <div class="card-body p-0">
+                    <div class="bg-primary px-5 py-4 text-center card-img-top">
+                      <img src="images/amour.png" alt="..." width="100" class="rounded-circle mb-2 img-thumbnail d-block mx-auto">
+                      <h5 class="text-white mb-0">– Louis L’Amour
+                      </h5>
+                      <p class="small text-white mb-0">Novelist
+                    </div>
+                    <div class="p-4 d-flex justify-content-center">
+                      <p>“Once you have read a book you care about, some part of it is always with you.”</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <!-- Card-->
+                <div class="card rounded shadow-sm border-0">
+                  <div class="card-body p-0">
+                    <div class="bg-success px-5 py-4 text-center card-img-top">
+                      <img src="images/emerson.png" alt="..." width="100" class="rounded-circle mb-2 img-thumbnail d-block mx-auto">
+                      <h5 class="text-white mb-0">– R.W Emerson
+                      </h5>
+                      <p class="small text-white mb-0">Essayist
+                      </p>
+                    </div>
+                    <div class="p-4 d-flex justify-content-center">
+                      <p>“If we encounter a man of rare intellect, we should ask him what books he reads.”</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <!-- Card-->
+                <div class="card rounded shadow-sm border-0">
+                  <div class="card-body p-0">
+                    <div class="bg-info px-5 py-4 text-center card-img-top">
+                      <img src="images/mark.png" alt="..." width="100" class="rounded-circle mb-2 img-thumbnail d-block mx-auto">
+                      <h5 class="text-white mb-0">– Mark Twain
+                      </h5>
+                      <p class="small text-white mb-0">Writer
+                      </p>
+                    </div>
+                    <div class="p-4 d-flex justify-content-center">
+                      <p>“The man who does not read good books is no better than the man who can’t.”</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <!-- Card-->
+                <div class="card rounded shadow-sm border-0">
+                  <div class="card-body p-0">
+                    <div class="bg-warning px-5 py-4 text-center card-img-top">
+                      <img src="images/rourke.png" alt="..." width="100" class="rounded-circle mb-2 img-thumbnail d-block mx-auto">
+                      <h5 class="text-white mb-0">– P.J. O’Rourke
+                      </h5>
+                      <p class="small text-white mb-0">Journalist
+                      </p>
+                    </div>
+                    <div class="p-4 d-flex justify-content-center">
+                      <p class="bold">“Always read something that will make you look good if you die in the middle of it.”</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- middle section -->
+      </div>
+    </section>
 
 
-					<!-- //footer categories -->
-					<!-- quick links -->
 
-					<div class="col-md-12 col-sm-12 footer-grids mt-md-0 mt-4">
-							<h3 class="text-white font-weight-bold mb-3">Get In Touch With Us.</h3>
-							<ul>
-									<li class="mb-3">
-											<i class="fas fa-map-marker"></i> Location: Sir M. Visvesvaraya Institute Of Technology, Bangalore &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-											<i class="fas fa-mobile"></i>Contact: 9982 xxx xxxx &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-											<i class="fas fa-phone"></i>Phone: 0746 xx xxxx &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-											<i class="fas fa-envelope-open"></i>
-											<a href="mailto:example@mail.com">Email: admin@bookplanet.ml </a>
-									</li>
-							</ul>
-					</div>
-
-					<div class="col-md-3 col-sm-6 footer-grids w3l-agileits mt-md-0 mt-4">
-						<!-- newsletter -->
-
-
-						<!-- //newsletter -->
-
-					</div>
-				</div>
-				<!-- //quick links -->
-			</div>
-		</div>
-		<!-- //footer third section -->
-
-		<!-- footer fourth section -->
-		<div class="agile-sometext py-md-5 py-sm-4 py-3">
-			<div class="container">
-				<!-- brands -->
+    <!-- Integrations Section-->
+    <section>
+      <div class="container py-5">
+      <h2 class="font-weight-bold mb-2">Book Planet
+      </h2>
+      <p class="font-italic text-muted mb-4">“Sometimes, you read a book and it fills you with this weird evangelical zeal, and you become convinced that the shattered world will never be put back together unless and until all living humans read the book.”</p>
+      <div class="row pb-5">
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card-->
+          <div class="card rounded shadow-sm border-0">
+            <div class="card-body p-5">
+              <i class="fa fa-dolly fa-4x mb-3 text-primary">
+              </i>
+              <h5>Free Shipping
+              </h5>
+              <p class="small pb-3 pt-1 text-muted font-italic">Enjoy free shipping on 90% of our online books across India.
+              </p>
+              <div class="progress rounded-pill">
+                <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 90%;" class="progress-bar rounded-pill">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card -->
+          <div class="card rounded shadow-sm border-0">
+            <div class="card-body p-5">
+              <i class="fa fa-thumbs-up fa-4x mb-3 text-success">
+              </i>
+              <h5>Trusted
+              </h5>
+              <p class="small pt-1 pb-3 text-muted font-italic">India's most trusted online book store from last 18 years.
+              </p>
+              <div class="progress rounded-pill">
+                <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%;" class="progress-bar bg-success rounded-pill">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card -->
+          <div class="card rounded shadow-sm border-0">
+            <div class="card-body p-5">
+              <i class="fa fa-shipping-fast fa-4x mb-3 text-info">
+              </i>
+              <h5>Fast Delivery
+              </h5>
+              <p class="small pb-3 pt-1 text-muted font-italic">Enjoy 2 day delivery option on 80% of our books across India.
+              </p>
+              <div class="progress rounded-pill">
+                <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" class="progress-bar bg-info rounded-pill">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <div class="card rounded shadow-sm border-0">
+            <div class="card-body p-5">
+              <i class="fa fa-shield-alt fa-4x mb-3 text-warning">
+              </i>
+              <h5>Secured
+              </h5>
+              <p class="small pb-3 pt-1 text-muted font-italic">All the transactions on our server are highly secured.
+              </p>
+              <div class="progress rounded-pill">
+                <div role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;" class="progress-bar bg-warning rounded-pill">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
 
 
 
 
-								<!-- //brands -->
-								<div class="row sub-some child-momu mt-4">
-									<div class="col-xl-4">
-										<h5 class="font-weight-bold mb-3">Payment Methods :</h5>
-									</div>
-									<div class="col-xl-8">
-										<!-- payment -->
+    <!-- Divider Section-->
+    <section class="bg-primary text-white">
+      <div style="margin-left:125px;">
+          <!-- footer categories -->
+          <div class="col-md-12 col-sm-12 footer-grids ">
+            <h3 class="text-white font-weight-bold mb-3" style="margin-left:40px;">Get In Touch With Us.
+            </h3>
+            <ul style="list-style-type: none;">
+              <li class="mb-3">
+                <i class="fas fa-map-marker">
+                </i>&nbsp;&nbsp; Location: Sir M. Visvesvaraya Institute Of Technology, Bangalore &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-mobile">
+                </i>&nbsp;&nbsp;Contact: 9982 xxx xxxx &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-phone">
+                </i>&nbsp;&nbsp;Phone: 0746 xx xxxx &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-envelope-open">
+                </i>
+                <a style="color:white!important;"href="mailto:example@mail.com">&nbsp;&nbsp;Email: admin@bookplanet.ml
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- //social icons -->
 
-											<ul>
-												<li>
-													<img src="images/pay2.png" alt="">
-												</li>
-												<li>
-													<img src="images/pay5.png" alt="">
-												</li>
-												<li>
-													<img src="images/pay1.png" alt="">
-												</li>
-												<li>
-													<img src="images/pay4.png" alt="">
-												</li>
-												<li>
-													<img src="images/pay6.png" alt="">
-												</li>
-												<li>
-													<img src="images/pay3.png" alt="">
-												</li>
-												<li>
-													<img src="images/pay7.png" alt="">
-												</li>
-												<li>
-													<img src="images/pay8.png" alt="">
-												</li>
-												<li>
-													<img src="images/pay9.png" alt="">
-												</li>
-											</ul>
-										<!-- //payment -->
+      </div>
 
-									</div>
-								</div>
+    </section>
 
-			</div>
-		</div>
-		<!-- //footer fourth section (text) -->
-	</footer>
-	<!-- //footer -->
-	<!-- copyright -->
-	<div class="copy-right py-3">
-			<div class="container">
-					<p class="text-center text-white">© Book Planet. All rights reserved | Design by
-							<a href="https://dntandan.ml"> Book Planet Team</a>
-					</p>
-			</div>
-	</div>
-	<!-- //copyright -->
 
-</body>
 
+
+    <!-- How it works section-->
+    <section>
+      <div class="container">
+        <div class="text-center">
+          <h2 class="mb-4">Payment Methods</h2>
+          <div class="row">
+            <div class="col-lg-9 mx-auto">
+              <div class="row bg-white p-0 h-100">
+                <!-- lg circle buttons-->
+                <div class="col"><img src="images/pay1.png" alt=""></div>
+                <div class="col"><img src="images/pay2.png" alt=""></div>
+                <div class="col"><img src="images/pay3.png" alt=""></div>
+                <div class="col"><img src="images/pay4.png" alt=""></div>
+                <div class="col"><img src="images/pay5.png" alt=""></div>
+                <div class="col"><img src="images/pay6.png" alt=""></div>
+                <div class="col"><img src="images/pay7.png" alt=""></div>
+                <div class="col"><img src="images/pay8.png" alt=""></div>
+                <div class="col"><img src="images/pay9.png" alt=""></div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2 mb-5 mb-lg-0">
+            <!-- <div class="footer-logo"><img src="images/bp-globe.png" alt="..." class="img-fluid"></div> -->
+          </div>
+          <div class="col-lg-3 mb-5 mb-lg-0">
+            <h5 class="footer-heading">Site pages</h5>
+            <ul class="list-unstyled">
+              <li> <a href="bookplanet.php" class="footer-link">Home</a></li>
+              <li> <a href="contact.php" class="footer-link">Contact</a></li>
+              <li> <a href="index.php" class="footer-link">Logout</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 mb-5 mb-lg-0">
+            <h5 class="footer-heading">Section</h5>
+            <ul class="list-unstyled">
+              <li> <a href="#poetry" class="footer-link">Poetry</a></li>
+              <li> <a href="#thriller" class="footer-link">Thriller</a></li>
+              <li> <a href="#history" class="footer-link">History</a></li>
+              <li> <a href="#shortstory" class="footer-link">Short Story</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h5 class="footer-heading">Social</h5>
+            <ul class="list-unstyled">
+              <li> <a  class="footer-link">Facebook</a></li>
+              <li> <a  class="footer-link">Twitter</a></li>
+              <li> <a  class="footer-link">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyrights">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 text-center text-lg-left">
+              <p class="copyrights-text mb-3 mb-lg-0">&copy; Book Planet <span id="year"></span>. All rights reserved. </p>
+              <!-- If you want to remove the backlink, please purchase a license for this template @ https://bootstrapious.com/attribution-free-license. Big thanks!-->
+
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+              <ul class="list-inline social mb-0">
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-facebook"></i></a><a href="#" class="social-link"><i class="fab fa-twitter"></i></a><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="dashboard/vendor/jquery/jquery.min.js"></script>
+    <script src="dashboard/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="dashboard/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="dashboard/vendor/lightbox2/js/lightbox.js"></script>
+    <script src="dashboard/js/front.js"></script>
+    <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+  </body>
 </html>
