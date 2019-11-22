@@ -9,6 +9,8 @@ Mini Project made for DBMS lab on selling books online through web portal.
 ![](/screenshots/newversion/login.png)
 # Screenshot Of Home Page
 ![](/screenshots/newversion/home.png)
+# Screenshot Of Admin Page
+![](/screenshots/newversion/admin.png)
 # Screenshot Of Book In Planet Page
 ![](/screenshots/newversion/books-in-planet.png)
 # Screenshot Of Book Details Page
