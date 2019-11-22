@@ -14,6 +14,9 @@
 .text-bold {
   font-weight: 700;
 }
+.text-success-c {
+  color: #e7475e !important;
+}
 
 .text-small {
   font-size: 0.9rem;
@@ -24,7 +27,7 @@
 }
 
 section {
-  padding: 7rem 0;
+  padding: 3rem 0;
 }
 
 strong {
@@ -176,7 +179,7 @@ nav.navbar .dropdown-menu {
 * =====================================================
 */
 footer.main-footer {
-  padding: 7rem 0;
+  padding: 4rem 0;
   background: #10826e;
   color: #fff;
   padding-bottom: 0;

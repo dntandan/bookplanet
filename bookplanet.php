@@ -42,6 +42,9 @@ $uid=$row["user_id"];
     <link rel="stylesheet" href="dashboard/css/custom.css">
     <!-- Favicon-->
     <link rel="shortcut icon" href="dashboard/img/favicon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+
 
 
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
@@ -93,13 +96,13 @@ $uid=$row["user_id"];
         <header class="text-center mb-5">
           <h1 class="display-4 font-weight-bold">Books In Our Planet
           </h1>
-          <p class="font-italic text-muted mb-0">An awesome collection of books with variant content from all over the planet.
+          <p  class="font-italic text-muted mb-0">An awesome collection of books with variant content from all over the planet.
           </p>
         </header>
         <!-- Start First Row [Books]-->
-        <h2 class="font-weight-bold mb-2">Poetry
+        <h2 id="poetry" class="font-weight-bold mb-2">Poetry
         </h2>
-        <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+        <p class="font-italic text-muted mb-4">Read literary work in which the expression of feelings and ideas is given intensity by the use of distinctive style and rhythm; poems collectively or as a genre of literature.
         </p>
         <div class="row pb-5 mb-4">
           <!-- Start Book Card -->
@@ -117,23 +120,23 @@ $uid=$row["user_id"];
                 </p>
                 <ul class="list-inline small">
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star-half text-success">
+                    <i class="fa fa-star-half text-success-c">
                     </i>
                   </li>
                 </ul>
@@ -169,23 +172,23 @@ $uid=$row["user_id"];
                 <p class="small text-muted font-italic">By : Lang Leav.</p>
                 <ul class="list-inline small">
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star-half text-success">
+                    <i class="fa fa-star-half text-success-c">
                     </i>
                   </li>
                 </ul>
@@ -220,23 +223,23 @@ $uid=$row["user_id"];
                 </h5>
                 <p class="small text-muted font-italic">By : Michelle Stradford.</p>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star-half text-success">
+                    <i class="fa fa-star-half text-success-c">
                     </i>
                   </li>
                 </ul>
@@ -273,23 +276,23 @@ $uid=$row["user_id"];
                 <p class="small text-muted font-italic">By : Xandria Phillips.</p>
                 <ul class="list-inline small">
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star-half text-success">
+                    <i class="fa fa-star-half text-success-c">
                     </i>
                   </li>
                 </ul>
@@ -313,11 +316,10 @@ $uid=$row["user_id"];
           <!-- End Book Card -->
         </div>
         <!-- End First Row [Books]-->
-
         <!-- Start Second Row [Books]-->
-        <h2 class="font-weight-bold mb-2">Thriller
+        <h2 id="thriller" class="font-weight-bold mb-2">Thriller
         </h2>
-        <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+        <p class="font-italic text-muted mb-4">Read a novel, play, or film with an exciting plot, typically involving crime or espionage.
         </p>
         <div class="row pb-5 mb-4">
           <!-- Start Book Card -->
@@ -325,33 +327,33 @@ $uid=$row["user_id"];
             <!-- Card-->
             <div class="card rounded shadow-sm border-0">
               <div class="card-body p-4">
-                <h5><span class="badge badge-pill badge-info mb-2">₹ 90.00</span></h5>
-                <img src="images/m1.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                <h5><span class="badge badge-pill badge-info mb-2">₹ 240.00</span></h5>
+                <img src="images/books/thriller/bluemoon.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
                 <h5>
-                  <a href="single.php?username=<?php echo $username ?>&bookid=1" class="link-product-add-cart text-dark">The Time Machine
+                  <a href="single.php?username=<?php echo $username ?>&bookid=5" class="link-product-add-cart text-dark">Blue Moon
                   </a>
                 </h5>
-                <p class="small text-muted font-italic">The Time Machine is a science fiction novella by H. G. Wells, published in 1895 and written as a frame narrative.
+                <p class="small text-muted font-italic">By : Lee Child
                 </p>
                 <ul class="list-inline small">
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star-half text-success">
+                    <i class="fa fa-star-half text-success-c">
                     </i>
                   </li>
                 </ul>
@@ -359,13 +361,13 @@ $uid=$row["user_id"];
               <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
                 <form action="checkout.php" method="post">
                   <fieldset>
-                    <input type="hidden" name="item_name" value="The Time Machine" />
-                    <input type="hidden" name="amount" value="161" />
+                    <input type="hidden" name="item_name" value="Blue Moon" />
+                    <input type="hidden" name="amount" value="240" />
                     <input type="hidden" name="uid" value=
                            <?php echo $uid?>>
                     <input type="hidden" name="username" value=
                            <?php echo $username?>>
-                    <input type="hidden" name="bookid" value=1>
+                    <input type="hidden" name="bookid" value=5>
                     <input type="submit" name="submit" value="Buy Now" class="mb-3 ml-5 btn btn-primary navbar-btn" />
                   </fieldset>
                 </form>
@@ -378,33 +380,33 @@ $uid=$row["user_id"];
             <!-- Card-->
             <div class="card rounded shadow-sm border-0">
               <div class="card-body p-4">
-                <h5><span class="badge badge-pill badge-info mb-2">₹ 90.00</span></h5>
-                <img src="images/m1.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                <h5><span class="badge badge-pill badge-info mb-2">₹ 180.00</span></h5>
+                <img src="images/books/thriller/thefuries.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
                 <h5>
-                  <a href="single.php?username=<?php echo $username ?>&bookid=1" class="link-product-add-cart text-dark">The Time Machine
+                  <a href="single.php?username=<?php echo $username ?>&bookid=6" class="link-product-add-cart text-dark">The Furies
                   </a>
                 </h5>
-                <p class="small text-muted font-italic">The Time Machine is a science fiction novella by H. G. Wells, published in 1895 and written as a frame narrative.
+                <p class="small text-muted font-italic">By : Katie Lowe
                 </p>
                 <ul class="list-inline small">
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star-half text-success">
+                    <i class="fa fa-star-half text-success-c">
                     </i>
                   </li>
                 </ul>
@@ -412,13 +414,13 @@ $uid=$row["user_id"];
               <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
                 <form action="checkout.php" method="post">
                   <fieldset>
-                    <input type="hidden" name="item_name" value="The Time Machine" />
-                    <input type="hidden" name="amount" value="161" />
+                    <input type="hidden" name="item_name" value="The Furies" />
+                    <input type="hidden" name="amount" value="180" />
                     <input type="hidden" name="uid" value=
                            <?php echo $uid?>>
                     <input type="hidden" name="username" value=
                            <?php echo $username?>>
-                    <input type="hidden" name="bookid" value=1>
+                    <input type="hidden" name="bookid" value=6>
                     <input type="submit" name="submit" value="Buy Now" class="mb-3 ml-5 btn btn-primary navbar-btn" />
                   </fieldset>
                 </form>
@@ -431,33 +433,33 @@ $uid=$row["user_id"];
             <!-- Card-->
             <div class="card rounded shadow-sm border-0">
               <div class="card-body p-4">
-                <h5><span class="badge badge-pill badge-info mb-2">₹ 90.00</span></h5>
-                <img src="images/m1.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                <h5><span class="badge badge-pill badge-info mb-2">₹ 360.00</span></h5>
+                <img src="images/books/thriller/ghoster.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
                 <h5>
-                  <a href="single.php?username=<?php echo $username ?>&bookid=1" class="link-product-add-cart text-dark">The Time Machine
+                  <a href="single.php?username=<?php echo $username ?>&bookid=7" class="link-product-add-cart text-dark">Ghoster
                   </a>
                 </h5>
-                <p class="small text-muted font-italic">The Time Machine is a science fiction novella by H. G. Wells, published in 1895 and written as a frame narrative.
+                <p class="small text-muted font-italic">By : Jason Arnoop
                 </p>
                 <ul class="list-inline small">
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star-half text-success">
+                    <i class="fa fa-star-half text-success-c">
                     </i>
                   </li>
                 </ul>
@@ -465,13 +467,13 @@ $uid=$row["user_id"];
               <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
                 <form action="checkout.php" method="post">
                   <fieldset>
-                    <input type="hidden" name="item_name" value="The Time Machine" />
-                    <input type="hidden" name="amount" value="161" />
+                    <input type="hidden" name="item_name" value="Ghoster" />
+                    <input type="hidden" name="amount" value="360" />
                     <input type="hidden" name="uid" value=
                            <?php echo $uid?>>
                     <input type="hidden" name="username" value=
                            <?php echo $username?>>
-                    <input type="hidden" name="bookid" value=1>
+                    <input type="hidden" name="bookid" value=7>
                     <input type="submit" name="submit" value="Buy Now" class="mb-3 ml-5 btn btn-primary navbar-btn" />
                   </fieldset>
                 </form>
@@ -484,33 +486,33 @@ $uid=$row["user_id"];
             <!-- Card-->
             <div class="card rounded shadow-sm border-0">
               <div class="card-body p-4">
-                <h5><span class="badge badge-pill badge-info mb-2">₹ 90.00</span></h5>
-                <img src="images/m1.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
+                <h5><span class="badge badge-pill badge-info mb-2">₹ 265.00</span></h5>
+                <img src="images/books/thriller/tenthgirl.jpg" alt="" class="img-fluid d-block mx-auto mb-3">
                 <h5>
-                  <a href="single.php?username=<?php echo $username ?>&bookid=1" class="link-product-add-cart text-dark">The Time Machine
+                  <a href="single.php?username=<?php echo $username ?>&bookid=8" class="link-product-add-cart text-dark">The Tenth Girl
                   </a>
                 </h5>
-                <p class="small text-muted font-italic">The Time Machine is a science fiction novella by H. G. Wells, published in 1895 and written as a frame narrative.
+                <p class="small text-muted font-italic">By : Sara Faring
                 </p>
                 <ul class="list-inline small">
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star-half text-success">
+                    <i class="fa fa-star-half text-success-c">
                     </i>
                   </li>
                 </ul>
@@ -518,13 +520,13 @@ $uid=$row["user_id"];
               <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
                 <form action="checkout.php" method="post">
                   <fieldset>
-                    <input type="hidden" name="item_name" value="The Time Machine" />
-                    <input type="hidden" name="amount" value="161" />
+                    <input type="hidden" name="item_name" value="The Tenth Girl" />
+                    <input type="hidden" name="amount" value="265" />
                     <input type="hidden" name="uid" value=
                            <?php echo $uid?>>
                     <input type="hidden" name="username" value=
                            <?php echo $username?>>
-                    <input type="hidden" name="bookid" value=1>
+                    <input type="hidden" name="bookid" value=8>
                     <input type="submit" name="submit" value="Buy Now" class="mb-3 ml-5 btn btn-primary navbar-btn" />
                   </fieldset>
                 </form>
@@ -536,9 +538,9 @@ $uid=$row["user_id"];
         <!-- End Second Row [Prosucts]-->
 
         <!-- Start Third Row [Books]-->
-        <h2 class="font-weight-bold mb-2">History
+        <h2 id="history" class="font-weight-bold mb-2">History
         </h2>
-        <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+        <p class="font-italic text-muted mb-4">Historical novel, a novel that has as its setting a period of history and that attempts to convey the spirit, manners, and social conditions of a past age with realistic detail and fidelity (which is in some cases only apparent fidelity) to historical fact.
         </p>
         <div class="row pb-5 mb-4">
           <!-- Start Book Card -->
@@ -552,27 +554,27 @@ $uid=$row["user_id"];
                   <a href="single.php?username=<?php echo $username ?>&bookid=9" class="link-product-add-cart text-dark">Sapiens
                   </a>
                 </h5>
-                <p class="small text-muted font-italic">Sapiens by Yuval Noah Harari tells about why did our foraging ancestors come together to create cities and kingdoms?
+                <p class="small text-muted font-italic">By : Yuval Noah Harari
                 </p>
                 <ul class="list-inline small">
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                 </ul>
@@ -605,26 +607,26 @@ $uid=$row["user_id"];
                   <a href="single.php?username=<?php echo $username ?>&bookid=10" class="link-product-add-cart text-dark">No Surrender
                   </a>
                 </h5>
-                <p class="small text-muted font-italic">No Surrender is an unforgettable story of a father’s extraordinary acts of valor during World War II by Christopher Edmonds .
+                <p class="small text-muted font-italic">By : Christopher Edmund
                 <ul class="list-inline small">
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star-half text-success">
+                    <i class="fa fa-star-half text-success-c">
                     </i>
                   </li>
                 </ul>
@@ -657,27 +659,27 @@ $uid=$row["user_id"];
                   <a href="single.php?username=<?php echo $username ?>&bookid=11" class="link-product-add-cart text-dark">Edison
                   </a>
                 </h5>
-                <p class="small text-muted font-italic">From Pulitzer Prize-winning author Edmund Morris comes the biography of Thomas Alva Edison, the most prolific genius in American history.
+                <p class="small text-muted font-italic">By : Edmund Morris
                 </p>
                 <ul class="list-inline small">
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                 </ul>
@@ -710,23 +712,23 @@ $uid=$row["user_id"];
                   <a href="single.php?username=<?php echo $username ?>&bookid=12" class="link-product-add-cart text-dark">Stolen
                   </a>
                 </h5>
-                <p class="small text-muted font-italic">A gripping and true story by Richard Bell, about five boys who were kidnapped in the North and smuggled into slavery in the Deep South.
+                <p class="small text-muted font-italic">By : Richard Bell
                 </p>
                 <ul class="list-inline small">
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                 </ul>
@@ -752,7 +754,7 @@ $uid=$row["user_id"];
         <!-- End Third Row [Prosucts]-->
 
         <!-- Start Fourth Row [Books]-->
-        <h2 class="font-weight-bold mb-2">Short Story
+        <h2 id="shortstory" class="font-weight-bold mb-2">Short Story
         </h2>
         <p class="font-italic text-muted mb-4">Short story is a piece of prose fiction that typically can be read in one sitting and focuses on <br>a self-contained incident or series of linked incidents.
         </p>
@@ -768,27 +770,27 @@ $uid=$row["user_id"];
                   <a href="single.php?username=<?php echo $username ?>&bookid=13" class="link-product-add-cart text-dark">Dear Life
                   </a>
                 </h5>
-                <p class="small text-muted font-italic">Dear Life is a short story collection by Canadian writer Alice Munro, published in 2012 by McClelland and Stewart.
+                <p class="small text-muted font-italic">By : Alice Munro
                 </p>
                 <ul class="list-inline small">
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star-half text-success">
+                    <i class="fa fa-star-half text-success-c">
                     </i>
                   </li>
                 </ul>
@@ -821,27 +823,27 @@ $uid=$row["user_id"];
                   <a href="single.php?username=<?php echo $username ?>&bookid=14" class="link-product-add-cart text-dark">Fragile Things
                   </a>
                 </h5>
-                <p class="small text-muted font-italic">Short Fictions and Wonders is a collection of short stories and poetry by English author Neil Gaiman in the year 2006.
+                <p class="small text-muted font-italic">By : Neil Gaiman
                 </p>
                 <ul class="list-inline small">
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                 </ul>
@@ -874,23 +876,22 @@ $uid=$row["user_id"];
                   <a href="single.php?username=<?php echo $username ?>&bookid=15" class="link-product-add-cart text-dark">The Grownup
                   </a>
                 </h5>
-                <p class="small text-muted font-italic">The Grownup, like others of Gillian Flynn's works, leaves us unprepared for the journey we are embarking on.
-                </p>
+                <p class="small text-muted font-italic">By : Gillian Flyn
                 <ul class="list-inline small">
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                 </ul>
@@ -923,23 +924,23 @@ $uid=$row["user_id"];
                   <a href="single.php?username=<?php echo $username ?>&bookid=16" class="link-product-add-cart text-dark">Get In Trouble
                   </a>
                 </h5>
-                <p class="small text-muted font-italic">Get in Trouble is a collection of short stories by author Kelly Link. It contains nine short stories.
+                <p class="small text-muted font-italic">By : Kerry Link
                 </p>
                 <ul class="list-inline small">
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star text-success">
+                    <i class="fa fa-star text-success-c">
                     </i>
                   </li>
                   <li class="list-inline-item m-0">
-                    <i class="fa fa-star-half text-success">
+                    <i class="fa fa-star-half text-success-c">
                     </i>
                   </li>
                 </ul>
@@ -968,214 +969,263 @@ $uid=$row["user_id"];
 
     </div>
 
-
-    <!-- Intro Section-->
-    <section>
-      <div class="container">
-        <div class="text-center">
-          <h2>Track projects from start to finish </h2>
-          <p class="lead text-muted mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p><a href="#" class="btn btn-primary">Learn More</a>
-        </div>
-        <div class="row">
-          <div class="col-lg-7 mx-auto mt-5"><img src="dashboard/img/illustration-1.svg" alt="..." class="intro-image img-fluid"></div>
-        </div>
-      </div>
-    </section>
-    <!-- Divider Section-->
-    <section class="bg-primary text-white">
-      <div class="container">
-        <div class="text-center">
-          <h2>Do great things together</h2>
-          <div class="row">
-            <div class="col-lg-9 mx-auto">
-              <p class="lead text-white mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor incididunt ut labore et dolore.</p>
-            </div>
-          </div><a href="#" class="btn btn-outline-light">Learn More</a>
-        </div>
-      </div>
-    </section>
-    <!-- Integrations Section-->
-    <section>
-      <div class="container">
-        <div class="text-center">
-          <h2>Integrations</h2>
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <p class="lead text-muted mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. eiusmod tempor incididunt ut labore.</p>
-            </div>
-          </div>
-        </div>
-        <div class="integrations mt-5">
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="box text-center">
-                <div class="icon d-flex align-items-end"><img src="dashboard/img/monitor.svg" alt="..." class="img-fluid"></div>
-                <h3 class="h4">Web desgin</h3>
-                <p class="text-small font-weight-light">Lorem Ipsum has been the industry's standard dummy text ever.</p>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="box text-center">
-                <div class="icon d-flex align-items-end"><img src="dashboard/img/target.svg" alt="..." class="img-fluid"></div>
-                <h3 class="h4">Print</h3>
-                <p class="text-small font-weight-light">Lorem Ipsum has been the industry's standard dummy text ever.</p>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="box text-center">
-                <div class="icon d-flex align-items-end"><img src="dashboard/img/chat.svg" alt="..." class="img-fluid"></div>
-                <h3 class="h4">SEO and SEM</h3>
-                <p class="text-small font-weight-light">Lorem Ipsum has been the industry's standard dummy text ever.</p>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="box text-center">
-                <div class="icon d-flex align-items-end"><img src="dashboard/img/idea.svg" alt="..." class="img-fluid"></div>
-                <h3 class="h4">Consulting</h3>
-                <p class="text-small font-weight-light">Lorem Ipsum has been the industry's standard dummy text ever.</p>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="box text-center">
-                <div class="icon d-flex align-items-end"><img src="dashboard/img/coffee-cup.svg" alt="..." class="img-fluid"></div>
-                <h3 class="h4">Email Marketing</h3>
-                <p class="text-small font-weight-light">Lorem Ipsum has been the industry's standard dummy text ever.</p>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="box text-center">
-                <div class="icon d-flex align-items-end"><img src="dashboard/img/pen.svg" alt="..." class="img-fluid"></div>
-                <h3 class="h4">UX &amp; UI</h3>
-                <p class="text-small font-weight-light">Lorem Ipsum has been the industry's standard dummy text ever.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <!-- CLients Section-->
     <section class="bg-gray">
-      <div class="container">
-        <div class="text-center">
-          <h2>Trusted by teams everywhere</h2>
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <p class="lead text-muted mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. sed do eiusmod tempor incididunt..</p>
+      <div class="container">  <!-- //top products -->
+        <!-- middle section -->
+        <div class="join-w3l1">
+
+          <div class="container py-xl-4 py-lg-2">
+            <!-- Third Row [Profiles]-->
+            <h2 class="font-weight-bold mb-2">Famous Quotes
+            </h2>
+            <p class="font-italic text-muted mb-4">Some of the famous quotes of novelist, writer eassyist and renowned persons.
+            </p>
+            <div class="row pb-5 mb-4">
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <!-- Card-->
+                <div class="card rounded shadow-sm border-0">
+                  <div class="card-body p-0">
+                    <div class="bg-primary px-5 py-4 text-center card-img-top">
+                      <img src="images/amour.png" alt="..." width="100" class="rounded-circle mb-2 img-thumbnail d-block mx-auto">
+                      <h5 class="text-white mb-0">– Louis L’Amour
+                      </h5>
+                      <p class="small text-white mb-0">Novelist
+                    </div>
+                    <div class="p-4 d-flex justify-content-center">
+                      <p>“Once you have read a book you care about, some part of it is always with you.”</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <!-- Card-->
+                <div class="card rounded shadow-sm border-0">
+                  <div class="card-body p-0">
+                    <div class="bg-success px-5 py-4 text-center card-img-top">
+                      <img src="images/emerson.png" alt="..." width="100" class="rounded-circle mb-2 img-thumbnail d-block mx-auto">
+                      <h5 class="text-white mb-0">– R.W Emerson
+                      </h5>
+                      <p class="small text-white mb-0">Essayist
+                      </p>
+                    </div>
+                    <div class="p-4 d-flex justify-content-center">
+                      <p>“If we encounter a man of rare intellect, we should ask him what books he reads.”</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <!-- Card-->
+                <div class="card rounded shadow-sm border-0">
+                  <div class="card-body p-0">
+                    <div class="bg-info px-5 py-4 text-center card-img-top">
+                      <img src="images/mark.png" alt="..." width="100" class="rounded-circle mb-2 img-thumbnail d-block mx-auto">
+                      <h5 class="text-white mb-0">– Mark Twain
+                      </h5>
+                      <p class="small text-white mb-0">Writer
+                      </p>
+                    </div>
+                    <div class="p-4 d-flex justify-content-center">
+                      <p>“The man who does not read good books is no better than the man who can’t.”</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <!-- Card-->
+                <div class="card rounded shadow-sm border-0">
+                  <div class="card-body p-0">
+                    <div class="bg-warning px-5 py-4 text-center card-img-top">
+                      <img src="images/rourke.png" alt="..." width="100" class="rounded-circle mb-2 img-thumbnail d-block mx-auto">
+                      <h5 class="text-white mb-0">– P.J. O’Rourke
+                      </h5>
+                      <p class="small text-white mb-0">Journalist
+                      </p>
+                    </div>
+                    <div class="p-4 d-flex justify-content-center">
+                      <p class="bold">“Always read something that will make you look good if you die in the middle of it.”</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- middle section -->
+      </div>
+    </section>
+
+
+
+    <!-- Integrations Section-->
+    <section>
+      <div class="container py-5">
+      <h2 class="font-weight-bold mb-2">Book Planet
+      </h2>
+      <p class="font-italic text-muted mb-4">“Sometimes, you read a book and it fills you with this weird evangelical zeal, and you become convinced that the shattered world will never be put back together unless and until all living humans read the book.”</p>
+      <div class="row pb-5">
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card-->
+          <div class="card rounded shadow-sm border-0">
+            <div class="card-body p-5">
+              <i class="fa fa-dolly fa-2x mb-3 text-primary">
+              </i>
+              <h5>Free Shipping
+              </h5>
+              <p class="small pb-3 pt-1 text-muted font-italic">Enjoy free shipping on 90% of our online books across India.
+              </p>
+              <div class="progress rounded-pill">
+                <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 90%;" class="progress-bar rounded-pill">
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="clients mt-5">
-          <div class="row">
-            <div class="col-lg-2"><img src="dashboard/img/client-1.svg" alt="" class="client-image img-fluid"></div>
-            <div class="col-lg-2"><img src="dashboard/img/client-2.svg" alt="" class="client-image img-fluid"></div>
-            <div class="col-lg-2"><img src="dashboard/img/client-3.svg" alt="" class="client-image img-fluid"></div>
-            <div class="col-lg-2"><img src="dashboard/img/client-4.svg" alt="" class="client-image img-fluid"></div>
-            <div class="col-lg-2"><img src="dashboard/img/client-5.svg" alt="" class="client-image img-fluid"></div>
-            <div class="col-lg-2"><img src="dashboard/img/client-6.svg" alt="" class="client-image img-fluid"></div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card -->
+          <div class="card rounded shadow-sm border-0">
+            <div class="card-body p-5">
+              <i class="fa fa-thumbs-up fa-2x mb-3 text-success">
+              </i>
+              <h5>Trusted
+              </h5>
+              <p class="small pt-1 pb-3 text-muted font-italic">India's most trusted online book store from last 18 years.
+              </p>
+              <div class="progress rounded-pill">
+                <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%;" class="progress-bar bg-success rounded-pill">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card -->
+          <div class="card rounded shadow-sm border-0">
+            <div class="card-body p-5">
+              <i class="fa fa-shipping-fast fa-2x mb-3 text-info">
+              </i>
+              <h5>Fast Delivery
+              </h5>
+              <p class="small pb-3 pt-1 text-muted font-italic">Enjoy 2 day delivery option on 80% of our books across India.
+              </p>
+              <div class="progress rounded-pill">
+                <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" class="progress-bar bg-info rounded-pill">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <div class="card rounded shadow-sm border-0">
+            <div class="card-body p-5">
+              <i class="fa fa-shield-alt fa-2x mb-3 text-warning">
+              </i>
+              <h5>Secured
+              </h5>
+              <p class="small pb-3 pt-1 text-muted font-italic">All the transactions on our server are highly secured.
+              </p>
+              <div class="progress rounded-pill">
+                <div role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;" class="progress-bar bg-warning rounded-pill">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
     </section>
+
+
+
+
+    <!-- Divider Section-->
+    <section class="bg-primary text-white">
+      <div style="margin-left:125px;">
+          <!-- footer categories -->
+          <div class="col-md-12 col-sm-12 footer-grids ">
+            <h3 class="text-white font-weight-bold mb-3" style="margin-left:40px;">Get In Touch With Us.
+            </h3>
+            <ul style="list-style-type: none;">
+              <li class="mb-3">
+                <i class="fas fa-map-marker">
+                </i>&nbsp;&nbsp; Location: Sir M. Visvesvaraya Institute Of Technology, Bangalore &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-mobile">
+                </i>&nbsp;&nbsp;Contact: 9982 xxx xxxx &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-phone">
+                </i>&nbsp;&nbsp;Phone: 0746 xx xxxx &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-envelope-open">
+                </i>
+                <a style="color:white!important;"href="mailto:example@mail.com">&nbsp;&nbsp;Email: admin@bookplanet.ml
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- //social icons -->
+
+      </div>
+
+    </section>
+
+
+
+
     <!-- How it works section-->
     <section>
       <div class="container">
         <div class="text-center">
-          <h2>Curious how Appton works for <br>large organizations?</h2>
+          <h2 class="mb-4">Payment Methods</h2>
           <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <p class="lead text-muted mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Eiusmod tempor incididunt ut labore.</p>
+            <div class="col-lg-9 mx-auto">
+              <div class="row bg-white p-0 h-100">
+                <!-- lg circle buttons-->
+                <div class="col"><img src="images/pay1.png" alt=""></div>
+                <div class="col"><img src="images/pay2.png" alt=""></div>
+                <div class="col"><img src="images/pay3.png" alt=""></div>
+                <div class="col"><img src="images/pay4.png" alt=""></div>
+                <div class="col"><img src="images/pay5.png" alt=""></div>
+                <div class="col"><img src="images/pay6.png" alt=""></div>
+                <div class="col"><img src="images/pay7.png" alt=""></div>
+                <div class="col"><img src="images/pay8.png" alt=""></div>
+                <div class="col"><img src="images/pay9.png" alt=""></div>
+              </div>
             </div>
-          </div><a href="#" class="btn btn-primary mt-4">Get Started</a>
         </div>
       </div>
     </section>
-    <!-- How it works Section-->
-    <section class="bg-gray">
-      <div class="container text-center text-lg-left">
-        <div class="row align-items-center">
-          <div class="col-lg-7">
-            <h2 class="divider-heading">Curious how Appton <br>works for large</h2>
-            <div class="row">
-              <div class="col-lg-10">
-                <p class="lead divider-subtitle mt-2 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing. Vitae animi mollitia cumque sunt soluta. consectetur adipisicing.</p>
-              </div>
-            </div><a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-          <div class="col-lg-5 mt-5 mt-lg-0"><img src="dashboard/img/illustration-2.svg" alt="" class="divider-image img-fluid"></div>
-        </div>
-      </div>
-    </section>
-    <!-- Portfolio Section-->
-    <section class="pb-0">
-      <div class="container">
-        <div class="text-center">
-          <h2>Portfolio</h2>
-          <p class="lead text-muted mt-2">You can make also a portfolio or image gallery.</p>
-        </div>
-        <div class="portfolio mt-5">
-          <div class="row">
-            <div class="col-lg-4 p-0"><a href="dashboard/img/portfolio-1.jpg" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="dashboard/img/portfolio-1.jpg" alt="image" class="img-fluid"></a></div>
-            <div class="col-lg-4 p-0"><a href="dashboard/img/portfolio-2.jpg" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="dashboard/img/portfolio-2.jpg" alt="image" class="img-fluid"></a></div>
-            <div class="col-lg-4 p-0"><a href="dashboard/img/portfolio-3.jpg" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="dashboard/img/portfolio-3.jpg" alt="image" class="img-fluid"></a></div>
-            <div class="col-lg-4 p-0"><a href="dashboard/img/portfolio-4.jpg" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="dashboard/img/portfolio-4.jpg" alt="image" class="img-fluid"></a></div>
-            <div class="col-lg-4 p-0"><a href="dashboard/img/portfolio-5.jpg" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="dashboard/img/portfolio-5.jpg" alt="image" class="img-fluid"></a></div>
-            <div class="col-lg-4 p-0"><a href="dashboard/img/portfolio-6.jpg" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="dashboard/img/portfolio-6.jpg" alt="image" class="img-fluid"></a></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Get Started Section-->
-    <section class="get-started">
-      <div class="container text-center">
-        <h2>Get started today</h2>
-        <div class="row">
-          <div class="col-lg-8 m-auto">
-            <p class="lead text-muted mt-2">If you can make a list or send an email, you can use Appton. Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6 mx-auto">
-            <form action="#" class="subscription-form mt-5">
-              <div class="form-group">
-                <input type="email" name="email" placeholder="Name@company.com" class="form-control">
-                <button type="submit" class="btn btn-primary">Get Started</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+
+
     <footer class="main-footer">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 mb-5 mb-lg-0">
-            <div class="footer-logo"><img src="images/bp-globe.png" alt="..." class="img-fluid"></div>
+          <div class="col-lg-2 mb-5 mb-lg-0">
+            <!-- <div class="footer-logo"><img src="images/bp-globe.png" alt="..." class="img-fluid"></div> -->
           </div>
           <div class="col-lg-3 mb-5 mb-lg-0">
             <h5 class="footer-heading">Site pages</h5>
             <ul class="list-unstyled">
-              <li> <a href="index.html" class="footer-link">Home</a></li>
-              <li> <a href="faq.html" class="footer-link">FAQ</a></li>
-              <li> <a href="contact.html" class="footer-link">Contact</a></li>
-              <li> <a href="text.html" class="footer-link">Text Page</a></li>
+              <li> <a href="bookplanet.php" class="footer-link">Home</a></li>
+              <li> <a href="contact.php" class="footer-link">Contact</a></li>
+              <li> <a href="index.php" class="footer-link">Logout</a></li>
             </ul>
           </div>
           <div class="col-lg-3 mb-5 mb-lg-0">
-            <h5 class="footer-heading">Product</h5>
+            <h5 class="footer-heading">Section</h5>
             <ul class="list-unstyled">
-              <li> <a href="#" class="footer-link">Why Appton?</a></li>
-              <li> <a href="#" class="footer-link">Enterprise</a></li>
-              <li> <a href="#" class="footer-link">Blog</a></li>
-              <li> <a href="#" class="footer-link">Pricing</a></li>
+              <li> <a href="#poetry" class="footer-link">Poetry</a></li>
+              <li> <a href="#thriller" class="footer-link">Thriller</a></li>
+              <li> <a href="#history" class="footer-link">History</a></li>
+              <li> <a href="#shortstory" class="footer-link">Short Story</a></li>
             </ul>
           </div>
           <div class="col-lg-3">
-            <h5 class="footer-heading">Resources</h5>
+            <h5 class="footer-heading">Social</h5>
             <ul class="list-unstyled">
-              <li> <a href="#" class="footer-link">Download</a></li>
-              <li> <a href="#" class="footer-link">Help Center</a></li>
-              <li> <a href="#" class="footer-link">Guides</a></li>
-              <li> <a href="#" class="footer-link">Partners</a></li>
+              <li> <a  class="footer-link">Facebook</a></li>
+              <li> <a  class="footer-link">Twitter</a></li>
+              <li> <a  class="footer-link">Instagram</a></li>
             </ul>
           </div>
         </div>
@@ -1184,13 +1234,13 @@ $uid=$row["user_id"];
         <div class="container">
           <div class="row">
             <div class="col-lg-6 text-center text-lg-left">
-              <p class="copyrights-text mb-3 mb-lg-0">&copy; All rights reserved. Appton.co. Design by <a href="https://bootstrapious.com/p/big-bootstrap-tutorial" class="external footer-link">Bootstrapious </a></p>
+              <p class="copyrights-text mb-3 mb-lg-0">&copy; Book Planet <span id="year"></span>. All rights reserved. </p>
               <!-- If you want to remove the backlink, please purchase a license for this template @ https://bootstrapious.com/attribution-free-license. Big thanks!-->
 
             </div>
             <div class="col-lg-6 text-center text-lg-right">
               <ul class="list-inline social mb-0">
-                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook"></i></a><a href="#" class="social-link"><i class="fa fa-twitter"></i></a><a href="#" class="social-link"><i class="fa fa-youtube-play"></i></a><a href="#" class="social-link"><i class="fa fa-vimeo"></i></a><a href="#" class="social-link"><i class="fa fa-pinterest"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-facebook"></i></a><a href="#" class="social-link"><i class="fab fa-twitter"></i></a><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
               </ul>
             </div>
           </div>
@@ -1203,5 +1253,6 @@ $uid=$row["user_id"];
     <script src="dashboard/vendor/jquery.cookie/jquery.cookie.js"> </script>
     <script src="dashboard/vendor/lightbox2/js/lightbox.js"></script>
     <script src="dashboard/js/front.js"></script>
+    <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
   </body>
 </html>

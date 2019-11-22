@@ -1189,7 +1189,7 @@ Appliances
             <!-- End Fourth Row [Prosucts]-->
 
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -1198,6 +1198,7 @@ Appliances
 
   <!-- //tittle heading -->
   <!-- //top products -->
+
   <!-- middle section -->
   <div class="join-w3l1 py-sm-5 py-4">
 
