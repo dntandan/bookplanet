@@ -9,12 +9,24 @@ Mini Project made for DBMS lab on selling books online through web portal.
 ![](/screenshots/newversion/login.png)
 # Screenshot Of Home Page
 ![](/screenshots/newversion/home.png)
-# Screenshot Of Email Page
-![](/screenshots/newversion/email.png)
+# Screenshot Of Book In Planet Page
+![](/screenshots/newversion/books-in-planet.png)
+# Screenshot Of Book Details Page
+![](/screenshots/newversion/book-details.png)
+# Screenshot Of Checkout Page
+![](/screenshots/newversion/checkout.png)
+# Screenshot Of Payment Page
+![](/screenshots/newversion/payment.png)
 # Screenshot Of Invoice Page
 ![](/screenshots/newversion/invoice.png)
 # Screenshot Of Contact Page
 ![](/screenshots/newversion/contact.png)
+# Screenshot Of Email Page
+![](/screenshots/newversion/email.png)
+# Screenshot Of SMS Received
+![](/screenshots/newversion/sms.jpg)
+
+
 # Screenshot Of Database In Store
 ![](/screenshots/newversion/books.png)
 
