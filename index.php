@@ -22,7 +22,10 @@
          $_SESSION['login_user'] = $myusername;
          header("location: bookplanet.php");
       }else {
-         $error = "Your Login Name or Password is invalid";
+         $error = '
+         <div class="alert alert-danger" role="alert" style="margin: 15 600 0 600;">
+           <center> Invalid Login Or Password. Try Again.</center>
+         </div>';
 
          echo $error;
       }
