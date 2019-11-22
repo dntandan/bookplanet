@@ -279,7 +279,7 @@
           <!-- Card-->
           <div class="card rounded shadow-sm border-0">
             <div class="card-body p-5">
-              <i class="fa fa-dolly fa-2x mb-3 text-primary">
+              <i class="fa fa-dolly fa-4x mb-3 text-primary">
               </i>
               <h5>Free Shipping
               </h5>
@@ -296,7 +296,7 @@
           <!-- Card -->
           <div class="card rounded shadow-sm border-0">
             <div class="card-body p-5">
-              <i class="fa fa-thumbs-up fa-2x mb-3 text-success">
+              <i class="fa fa-thumbs-up fa-4x mb-3 text-success">
               </i>
               <h5>Trusted
               </h5>
@@ -313,7 +313,7 @@
           <!-- Card -->
           <div class="card rounded shadow-sm border-0">
             <div class="card-body p-5">
-              <i class="fa fa-shipping-fast fa-2x mb-3 text-info">
+              <i class="fa fa-shipping-fast fa-4x mb-3 text-info">
               </i>
               <h5>Fast Delivery
               </h5>
@@ -330,7 +330,7 @@
         <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
           <div class="card rounded shadow-sm border-0">
             <div class="card-body p-5">
-              <i class="fa fa-shield-alt fa-2x mb-3 text-warning">
+              <i class="fa fa-shield-alt fa-4x mb-3 text-warning">
               </i>
               <h5>Secured
               </h5>
