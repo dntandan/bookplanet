@@ -174,7 +174,7 @@ $conn = mysqli_connect("localhost","root","","shop");
                 <center class="mt-3 mb-3">
                   <div id="editor"></div>
                 <button onclick="printPage()" class="btn btn-warning">Print as PDF</button>
-                <a class="btn btn-outline-info" href="welcome.php" role="button">Back To Home</a>
+                <a class="btn btn-outline-info" href="bookplanet.php" role="button">Back To Home</a>
                   </center>
                   Invoice was created on a computer and is valid without the signature and seal.
               </footer>
