@@ -19,6 +19,8 @@ if(isset($_POST))
   $bookname=myUrlEncode($bookname);
   $add1=myUrlEncode($add1);
   $add2=myUrlEncode($add2);
+  $trackid="BP-TRACK-".rand();
+  $invoice="B-P-I-".rand();
 }
 ?>
 
@@ -30,8 +32,15 @@ $email->setFrom("admin@bookplanet.ml", "Admin - Book Planet");
 $email->setSubject("Shipment Confirmation");
 $email->addTo("deepnarayan006@gmail.com", "Book Planet Order");
 // $email->addContent("text/plain", "Your Shipment is succesfully created");
-$email->addContent(
-    "text/html", "Your Shipment is succesfully created <strong>for Book Planet order</strong>"
+$email->addContent("text/html", "<center><h1>Book Planet Order Confirmation</h1></center>
+    <hr style='max-width:18%;'>
+    <center>
+      <p>Hello $firstname $lastname, your order number $invoice with Book Planet for the book $bookname is Confirmed.</p>
+      <p>Expect the delivery within 72 hours with the Shipment ID : $trackid <br> with our courier partner Xpressbee.</p>
+      <br>
+      Regards,<br>
+      <strong>Team Book Planet</strong>
+    </center>"
 );
 
 $sendgrid = new \SendGrid($API_KEY);
@@ -149,7 +158,7 @@ $conn = mysqli_connect("localhost","root","","shop");
                           <div class="email"><a href="mailto:john@example.com"><?php echo $email?></a></div>
                       </div>
                       <div class="col invoice-details">
-                          <h1 class="invoice-id">INVOICE B-P-I</h1>
+                          <h1 class="invoice-id">INVOICE <?php echo $invoice ?></h1>
                           <div class="date">Date of Invoice: <?php echo date("d/m/Y") ?></div>
                           <div class="date">Due Date: <?php echo date('d/m/Y', strtotime(' + 10 days')); ?></div>
                       </div>
