@@ -119,9 +119,12 @@ select.form-control {
 
         <!-- Registeration Form -->
         <div class="col-md-7 col-lg-6 ml-auto">
+						<!-- Top Name -->
+						<div class=" col-lg-12 mb-4">
+								<center><h1>Contact Us</h1></center>
+						</div>
             <form action="querysent.php" method="post">
                 <div class="row">
-
                     <!-- First Name -->
                     <div class="input-group col-lg-12 mb-4">
                         <div class="input-group-prepend">

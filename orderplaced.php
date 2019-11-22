@@ -417,7 +417,7 @@ $conn = mysqli_connect("localhost","root","","shop");
 
     $sendgrid = new \SendGrid($API_KEY);
     if ($sendgrid->send($email)) {
-      print "Email sent";
+      print "";
     }
   }
 ?>
