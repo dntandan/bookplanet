@@ -39,30 +39,31 @@ $conn = mysqli_connect("localhost","root","","shop");
 	$conn->close();
 ?>
 <?php
-      // Account details
-      $apiKey = urlencode('aJOo8nc0mC4-jEfXsyRa5E5OOs1z1L9CLte7wyZWVY');
+	// Authorisation details.
+	$username = "iavinas@yahoo.com";
+	$hash = "2b7e743cb0aab03b891c1c47eb3f3a0000cd2606c5572d91524026f3fc1f690d";
 
-      // Message details
-      $numbers = array($number);
-      $sender = urlencode('TXTLCL');
-      $message = rawurlencode("Hi $firstname, your WishList package has been confirmed. Estimated delievery: 48 hours. For any queries, contact 9876543210");
+	// Config variables. Consult http://api.textlocal.in/docs for more info.
+	$test = "0";
 
-      $numbers = implode(',', $numbers);
+	// Data for text message. This is the text message data.
+	$sender = "TXTLCL"; // This is who the message appears to be from.
 
-      // Prepare data for POST request
-      $data = array('apikey' => $apiKey, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
+  // uncomment below line to send sms
+  // $numbers = "$number"; // A single number or a comma-seperated list of numbers
 
-      // Send the POST request with cURL
-      $ch = curl_init('https://api.textlocal.in/send/');
-      curl_setopt($ch, CURLOPT_POST, true);
-      curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-      $response = curl_exec($ch);
-      curl_close($ch);
-
-      // Process your response here
-      // echo $response;
+  // 612 chars or less
+  $message = "Hi $firstname, your Book Planet order has been confirmed. Check your email for details regarding shipment of package.";
+	$message = urlencode($message);
+	$data = "username=".$username."&hash=".$hash."&message=".$message."&sender=".$sender."&numbers=".$numbers."&test=".$test;
+	$ch = curl_init('http://api.textlocal.in/send/?');
+	curl_setopt($ch, CURLOPT_POST, true);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	$result = curl_exec($ch); // This is the result from the API
+	curl_close($ch);
 ?>
+
 <?php
   $con=mysqli_connect("localhost","root","","shop");
   $sql2="SELECT book_count from book where book_id='$bookid'";
