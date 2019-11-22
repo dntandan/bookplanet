@@ -1,4 +1,24 @@
 <?php
+	$username=$_GET['username'];
+	$bookid=$_GET['bookid'];
+	$con=mysqli_connect("localhost","root","","shop");
+   		$fetchUID="select * from book where book_id='$bookid'";
+   		$res=$con->query($fetchUID);
+   		if($res->num_rows>0)
+   		{
+   			while($row=$res->fetch_assoc())
+   			{
+   				$bname=$row["book_name"];
+   				$bookdesc=$row["book_desc"];
+   				$bookprice=$row["book_price"];
+   				$img=$row['book_img'];
+   				$count=$row['book_count'];
+					$isbn=$row['book_isbn'];
+					$publication=$row['book_publ'];
+   			}
+   		}
+?>
+<?php
 if(isset($_POST)){
   $item_name= $_POST['item_name'];
   $amount= $_POST['amount'];
@@ -45,820 +65,536 @@ function myUrlEncode($string) {
 
 
 
-
-<!doctype html>
-
 <!DOCTYPE html>
-<html lang="zxx">
-
-<head>
-	<title>Book Planet | Checkout</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-	<!-- Meta tag Keywords -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8" />
-	<meta name="keywords" content="Electro Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
-	/>
-
-	<style>
-	.round-img
-	{
-
-		border-radius: 50%;
-
-		height: 100;
-
-		width: 100;
-	}
-
-</style>
-	<script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
-
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-	</script>
-	<!-- //Meta tag Keywords -->
-
-	<!-- Custom-Files -->
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- Bootstrap css -->
-	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- Main css -->
-	<link rel="stylesheet" href="css/fontawesome-all.css">
-	<!-- Font-Awesome-Icons-CSS -->
-	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- pop-up-box -->
-	<link href="css/menu.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- menu style -->
-	<!-- //Custom-Files -->
-
-	<!-- web fonts -->
-	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
-	    rel="stylesheet">
-	<!-- //web fonts -->
-
-</head>
-
-<body>
-  <!-- top-header -->
-  <div class="agile-main-top">
-      <div class="container-fluid">
-          <div class="row main-top-w3l py-2">
-              <div class="col-lg-4 header-most-top">
-                  <!--<p class="text-white text-lg-left text-center">Offer Zone Top Deals & Discounts
-          <i class="fas fa-shopping-cart ml-1"></i>
-        </p>-->
-              </div>
-              <div class="col-lg-8 header-right mt-lg-0 mt-2">
-                  <!-- header lists -->
-                  <ul>
-                      <!--<li class="text-center border-right text-white">
-            <a class="play-icon popup-with-zoom-anim text-white" href="#small-dialog1">
-              <i class="fas fa-map-marker mr-2"></i>Select Location</a>
-          </li>-->
-                      <li class="text-center border-right text-white">
-                          <a href="#" data-toggle="modal" data-target="#exampleModal" class="text-white">
-                              <!--<i class="fas fa-truck mr-2"></i>Track Order</a>-->
-                      </li>
-                      <!--<li class="text-center border-right text-white">
-            <i class="fas fa-phone mr-2"></i>
-          </li>-->
-
-                      <li class="text-center text-white">
-                          <a href="#" data-toggle="modal" data-target="#exampleModal2" class="text-white">
-                              <!--<i class="fas fa-sign-out-alt mr-2"></i>Register </a>-->
-                      </li>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Checkout | Book Planet</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="dashboard/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="dashboard/vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Google fonts - Poppins-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600">
+    <!-- Lightbox-->
+    <link rel="stylesheet" href="dashboard/vendor/lightbox2/css/lightbox.css">
+    <!-- Custom font icons-->
+    <link rel="stylesheet" href="dashboard/css/fontastic.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="dashboard/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="dashboard/css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="dashboard/img/favicon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="css/fontawesome-all.css">
 
 
-                      <li class="text-center text-white">
-                          <!--<a href="#" data-toggle="modal" data-target="#exampleModal" class="text-white">-->
-                          <i class="fas fa-sign-in-alt mr-2"></i>Welcome, <?php echo $username ?>
-                      </li>
 
-                  </ul>
-                  <!-- //header lists -->
-              </div>
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="dashboard/https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="dashboard/https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container"><a href="bookplanet.php" class="navbar-brand"><img src="images/logo-bookplanet.png" alt="" class="img-fluid"></a>
+          <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">Menu<i class="fa fa-bars ml-2"></i></button>
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <!-- Link-->
+              <li class="nav-item" > <a href="index.html" class="nav-link active" style="color:#e7475e!important;"><i class="fas fa-sign-in-alt mr-2">
+              </i>Welcome,
+              <?php echo $username ?></a></li>
+          </ul><a href="contact.php"  class="btn btn-primary navbar-btn ml-0 ml-lg-3">Contact </a>
+        </ul><a href="index.php"  class="btn btn-primary navbar-btn ml-0 ml-lg-3">Logout </a>
           </div>
-      </div>
-  </div>
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title text-center">Log In</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
+        </div>
+      </nav>
+    </header>
+    <!-- Hero Section-->
+    <section class="hero">
+      <div class="container mb-5">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <h1 class="hero-heading mb-0">Online Book <br> Store</h1>
+            <div class="row">
+              <div class="col-lg-10">
+                <p class="lead text-muted mt-4 mb-4">Shop books online and get it delivered across the planet. No hidden charges.</p>
               </div>
-              <div class="modal-body">
-                  <form action="checkout.php" method="post">
-                      <div class="form-group">
-                          <label class="col-form-label">E-mail</label>
-                          <input type="text" class="form-control" placeholder=" " name="email" required="">
-                      </div>
-                      <div class="form-group">
-                          <label class="col-form-label">Password</label>
-                          <input type="password" class="form-control" placeholder=" " name="pw" required="">
-                      </div>
-                      <div class="right-w3l">
-                          <input type="submit" class="form-control" value="Log in">
-                      </div>
-                      <div class="sub-w3l">
-                          <div class="custom-control custom-checkbox mr-sm-2">
-                              <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-                              <label class="custom-control-label" for="customControlAutosizing">Remember me?</label>
-                          </div>
-                      </div>
-                      <p class="text-center dont-do mt-3">Don't have an account?
-                          <a href="#" data-toggle="modal" data-target="#exampleModal2">
-                              Register Now</a>
-                      </p>
-                  </form>
-              </div>
+            </div>
           </div>
+          <div class="col-lg-7"><img src="images/bp-globe.png" alt="..." class="hero-image img-fluid d-none d-lg-block"></div>
+        </div>
       </div>
-  </div>
-
-  <!-- navigation -->
-
-
-  <div class="navbar-inner">
-      <div class="container">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-
-              <!--<div class="agileits-navi_search">
-        <form action="checkout.php" method="post">
-          <select id="agileinfo-nav_search" name="agileinfo_search" class="border" required="">
-            <option value="">All Categories</option>
-            <option value="Televisions">Televisions</option>
-            <option value="Headphones">Headphones</option>
-            <option value="Computers">Computers</option>
-            <option value="Appliances">Appliances</option>
-            <option value="Mobiles">Mobiles</option>
-            <option value="Fruits &amp; Vegetables">Tv &amp; Video</option>
-            <option value="iPad & Tablets">iPad & Tablets</option>
-            <option value="Cameras & Camcorders">Cameras & Camcorders</option>
-            <option value="Home Audio & Theater">Home Audio & Theater</option>
-          </select>
-        </form>
-      </div>-->
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="col-md-3 logo_agile">
-                  <h1 class="text-center">
-                      <a href="welcome.php" class="font-weight-bold font-italic">
-                          <img src="images/logo-bookplanet.png" alt=" " class="img-fluid">
-                      </a>
-                  </h1>
-              </div>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ml-auto text-center mr-xl-5">
-                      <li class="nav-item active mr-lg-2 mb-lg-0 mb-2">
-                          <a class="nav-link" href="welcome.php?username=<?php echo $username ?>">Home
-                              <span class="sr-only">(current)</span>
-                          </a>
-                      </li>
-                      <!--<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Genres
-            </a>
-            <div class="dropdown-menu">
-              <div class="agile_inner_drop_nav_info p-4">
-                <div class="row">
-                  <div class="col-sm-6 multi-gd-img">
-                    <ul class="multi-column-dropdown">
-                      <li>
-                        <a href="productsf.html">Science-Fiction</a>
-                      </li>
-                      <li>
-                        <a href="product.html">Mystery</a>
-                      </li>
-                      <li>
-                        <a href="product.html">Romantic</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>-->
-                      <!--<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Appliances
-            </a>
-            <div class="dropdown-menu">
-              <div class="agile_inner_drop_nav_info p-4">
-                <h5 class="mb-3">TV, Appliances, Electronics</h5>
-                <div class="row">
-                  <div class="col-sm-6 multi-gd-img">
-                    <ul class="multi-column-dropdown">
-                      <li>
-                        <a href="product2.html">Televisions</a>
-                      </li>
-                      <li>
-                        <a href="product2.html">Home Entertainment Systems</a>
-                      </li>
-                      <li>
-                        <a href="product2.html">Headphones</a>
-                      </li>
-                      <li>
-                        <a href="product2.html">Speakers</a>
-                      </li>
-                      <li>
-                        <a href="product2.html">MP3, Media Players & Accessories</a>
-                      </li>
-                      <li>
-                        <a href="product2.html">Audio & Video Accessories</a>
-                      </li>
-                      <li>
-                        <a href="product2.html">Cameras</a>
-                      </li>
-                      <li>
-                        <a href="product2.html">DSLR Cameras</a>
-                      </li>
-                      <li>
-                        <a href="product2.html">Camera Accessories</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-sm-6 multi-gd-img">
-                    <ul class="multi-column-dropdown">
-                      <li>
-                        <a href="product2.html">Musical Instruments</a>
-                      </li>
-                      <li>
-                        <a href="product2.html">Gaming Consoles</a>
-                      </li>
-                      <li>
-                        <a href="product2.html">All Electronics</a>
-                      </li>
-                      <li>
-                        <a href="product2.html">Air Conditioners</a>
-                      </li>
-                      <li>
-                        <a href="product2.html">Refrigerators</a>
-                      </li>
-                      <li>
-                        <a href="product2.html">Washing Machines</a>
-                      </li>
-                      <li>
-                        <a href="product2.html">Kitchen & Home Appliances</a>
-                      </li>
-                      <li>
-                        <a href="product2.html">Heating & Cooling Appliances</a>
-                      </li>
-                      <li>
-                        <a href="product2.html">All Appliances</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>-->
-                      <!--<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-            <a class="nav-link" href="about.php">About Us</a>
-          </li>-->
-                      <li class="nav-item">
-                          <a class="nav-link" href="contact.php?uname=<?php echo $username?>">Contact Us</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="index.php">Logout</a>
-                      </li>
-                  </ul>
-              </div>
-          </nav>
-      </div>
-  </div>
-  <!-- //navigation -->
-
-	<!-- banner -->
-
-	<!-- //navigation -->
-
-	<!-- banner-2 -->
-	<div class="page-head_agile_info_w3l">
-
-	</div>
-	<!-- //banner-2 -->
-	<!-- page -->
-	<div class="services-breadcrumb">
-		<div class="agile_inner_breadcrumb">
-			<div class="container">
-				<ul class="w3_short">
-					<li>
-						<a href="welcome.php">Home</a>
-						<i>|</i>
-					</li>
-					<li>Checkout</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<!-- //page -->
-	<!-- checkout page -->
-	<div class="privacy py-sm-5 py-4">
-		<div class="container py-xl-4 py-lg-2">
-			<!-- tittle heading -->
-			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
-				<span>C</span>heckout
-			</h3>
-			<!-- //tittle heading -->
-			<div class="checkout-right">
-				<h4 class="mb-sm-4 mb-3">Your shopping cart contains:
-					<span>1 Product</span>
-				</h4>
-				<div class="table-responsive">
-					<table class="timetable_sub">
-						<thead>
-							<tr>
-								<th>SL No.</th>
-								<th>Product Name</th>
-								<th>Price</th>
+    </section>
 
 
 
-
-							</tr>
-						</thead>
-						<tbody>
-							<tr class="rem1">
-								<td class="invert">1</td>
-
-
-
-
-								<td class="invert"><?php echo $item_name?></td>
-								<td class="invert">₹<?php echo $amount?>.00</td>
-
-
-							</tr>
-
-						</tbody>
-					</table>
-				</div>
-			</div>
-
-			<div class="checkout-left">
-				<div class="address_form_agile mt-sm-5 mt-4">
-					<h4 class="mb-sm-4 mb-3">Please enter shipping details</h4>
-          <form action="payment.php" method="post">
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label >First Name</label>
-                <input type="text" class="form-control" name="firstname" id="inputEmail4" placeholder="Stephen" required="">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="inputPassword4">Last Name</label>
-                <input type="text" class="form-control" name="lastname" placeholder="Kowaski" required="">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputAddress">Address</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="add1" required="">
-            </div>
-            <div class="form-group">
-              <label for="inputAddress2">Address 2</label>
-              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="add2" required="">
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label >Email</label>
-                <input type="email" class="form-control" name="email" id="inputEmail4" placeholder="user@domain.tlds" required="">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="inputPassword4">Phone Number</label>
-                <input type="tel" class="form-control" name="number" placeholder="99-82-xxx-xxx" required="">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="inputCity">City</label>
-                <input type="text" class="form-control" id="inputCity" placeholder="Bangalore" name="city"required="">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="inputState">State</label>
-                <input type="text" class="form-control" id="inputState" placeholder="Karnataka" name="state"required="">
-              </div>
-              <div class="form-group col-md-2">
-                <label for="inputZip">Zip</label>
-                <input type="text" class="form-control" id="inputZip" placeholder="562157" name="pin"required="">
-              </div>
-            </div>
-
-            <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" id="inlineRadio1" name="gender" value="m" checked>
-            <label class="form-check-label" for="inlineRadio1">Male</label>
-            </div>
-            <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio"  id="inlineRadio2" name="gender" value="f">
-            <label class="form-check-label" for="inlineRadio2">Female</label>
-            </div>
-            <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio"  id="inlineRadio3" name="gender" value="0">
-            <label class="form-check-label" for="inlineRadio3">Other</label>
-            </div>
-            <input type="hidden" name="bookid" value=<?php echo $bookid ?>>
-
-            <input type="hidden" name="bookname" value=<?php echo $item_name ?>>
-
-            <input type="hidden" name="amount" value=<?php echo $amount ?>>
-
-            <input type="hidden" name="username" value=<?php echo $username?>>
-
-            <input type="hidden" name="uid" value=<?php echo $uid?>>
-            <br>
-            <br>
-            <?php if ($count==0):?>
-              <p>Sorry! The book is sold out </p>
-
-            <?php else: ?>
-            <input type="submit" value="Pay Now" class="btn btn-success btn-lg"></input>
-
-          <?php endif; ?>
-
-          </form>
-
-
-
-					<!--<div class="checkout-right-basket">
-						<a href="payment.html">Make a Payment
-							<span class="far fa-hand-point-right"></span>
-						</a>
-					</div>-->
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //checkout page -->
-
-	<!-- middle section -->
-	<div class="join-w3l1 py-sm-5 py-4">
-		<div class="container py-xl-4 py-lg-2">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="join-agile text-left p-4">
-						<div class="row">
-							<div class="col-sm-7 offer-name">
-								<h4 class="mt-2 mb-3">“I often carry things to read so that I will not have to look at people.”</h4>
-								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Charles Bukowski</p>
-							</div>
-							<div class="col-sm-5 offerimg-w3l">
-								<img src="images/charles-b.jpg" alt="" class="img-fluid">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 mt-lg-0 mt-5">
-					<div class="join-agile text-left p-4">
-						<div class="row ">
-							<div class="col-sm-7 offer-name">
-								<h4 class="mt-2 mb-3">“A book worth reading is worth buying.”</h4>
-								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-John Ruskin</p>
-							</div>
-							<div class="col-sm-5 offerimg-w3l">
-								<img src="images/j-ruskin.jpg" style="max-height:245px;" alt="" class="img-fluid">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- middle section -->
-
-	<!-- footer -->
-	<footer>
-		<div class="footer-top-first">
-			<div class="container py-md-5 py-sm-4 py-3">
-				<!-- footer first section -->
-
-
-				<!-- //footer first section -->
-				<!-- footer second section -->
-				<div class="row w3l-grids-footer border-top border-bottom py-sm-4 py-3">
-					<div class="col-md-4 offer-footer">
-						<div class="row">
-							<div class="col-4 icon-fot">
-								<i class="fas fa-dolly"></i>
-							</div>
-							<div class="col-8 text-form-footer">
-								<h3>Free Shipping</h3>
-								<p></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 offer-footer my-md-0 my-4">
-						<div class="row">
-							<div class="col-4 icon-fot">
-								<i class="fas fa-shipping-fast"></i>
-							</div>
-							<div class="col-8 text-form-footer">
-								<h3>Fast Delivery</h3>
-								<p>World Wide</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 offer-footer">
-						<div class="row">
-							<div class="col-4 icon-fot">
-								<i class="far fa-thumbs-up"></i>
-							</div>
-							<div class="col-8 text-form-footer">
-								<h3>Big Choice</h3>
-								<p>of Products</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- //footer second section -->
-			</div>
-		</div>
-		<!-- footer third section -->
-		<div class="w3l-middlefooter-sec">
-			<div class="container py-md-5 py-sm-4 py-3">
-				<div class="row footer-info w3-agileits-info">
-					<!-- footer categories -->
-
-
-					<!-- //footer categories -->
-					<!-- quick links -->
-
-          <div class="col-md-12 col-sm-12 footer-grids mt-md-0 mt-4">
-              <h3 class="text-white font-weight-bold mb-3">Get In Touch With Us.</h3>
-              <ul>
-                  <li class="mb-3">
-                      <i class="fas fa-map-marker"></i> Location: Sir M. Visvesvaraya Institute Of Technology, Bangalore &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                      <i class="fas fa-mobile"></i>Contact: 9982 xxx xxxx &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                      <i class="fas fa-phone"></i>Phone: 0746 xx xxxx &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                      <i class="fas fa-envelope-open"></i>
-                      <a href="mailto:example@mail.com">Email: admin@bookplanet.ml </a>
-                  </li>
-              </ul>
-          </div>
-
-					<div class="col-md-3 col-sm-6 footer-grids w3l-agileits mt-md-0 mt-4">
-						<!-- newsletter -->
-
-
-						<!-- //newsletter -->
-
-					</div>
-				</div>
-				<!-- //quick links -->
-			</div>
-		</div>
-		<!-- //footer third section -->
-
-		<!-- footer fourth section -->
-		<div class="agile-sometext py-md-5 py-sm-4 py-3">
-			<div class="container">
-				<!-- brands -->
-
-
-
-
-								<!-- //brands -->
-                <div class="row sub-some child-momu mt-4">
-                  <div class="col-xl-4">
-                    <h5 class="font-weight-bold mb-3">Payment Methods :</h5>
-                  </div>
-                  <div class="col-xl-8">
-                    <!-- payment -->
-
-            					<ul>
-            						<li>
-            							<img src="images/pay2.png" alt="">
-            						</li>
-            						<li>
-            							<img src="images/pay5.png" alt="">
-            						</li>
-            						<li>
-            							<img src="images/pay1.png" alt="">
-            						</li>
-            						<li>
-            							<img src="images/pay4.png" alt="">
-            						</li>
-            						<li>
-            							<img src="images/pay6.png" alt="">
-            						</li>
-            						<li>
-            							<img src="images/pay3.png" alt="">
-            						</li>
-            						<li>
-            							<img src="images/pay7.png" alt="">
-            						</li>
-            						<li>
-            							<img src="images/pay8.png" alt="">
-            						</li>
-            						<li>
-            							<img src="images/pay9.png" alt="">
-            						</li>
-            					</ul>
-            				<!-- //payment -->
-
-                  </div>
-                </div>
-
-			</div>
-		</div>
-		<!-- //footer fourth section (text) -->
-	</footer>
-	<!-- //footer -->
-	<!-- copyright -->
-  <div class="copy-right py-3">
-      <div class="container">
-          <p class="text-center text-white">© Book Planet. All rights reserved | Design by
-              <a href="https://dntandan.ml"> Book Planet Team</a>
+    <!-- bOOKS list -->
+    <!-- top Products -->
+    <div class="ads-grid py-sm-5 py-4" style="margin-top:-6%">
+      <div class="container py-5">
+        <!-- For Demo Purpose-->
+        <header class="text-center mb-5">
+          <h1 class="display-4 font-weight-bold">Checkout Detail
+          </h1>
+          <p  class="font-italic text-muted mb-0">Fill all the details carefully befor procedding further.
           </p>
+        </header>
+
+
+
+<!-- Start Checkout Details-->
+
+<div class="px-4 px-lg-0">
+
+<div class="pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+
+        <!-- Shopping cart table -->
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" class="border-0 bg-light">
+                  <div class="p-2 px-3 text-uppercase">Product</div>
+                </th>
+                <th scope="col" class="border-0 bg-light">
+                  <div class="py-2 text-uppercase">Price</div>
+                </th>
+                <th scope="col" class="border-0 bg-light">
+                  <div class="py-2 text-uppercase">Quantity</div>
+                </th>
+                <th scope="col" class="border-0 bg-light">
+                  <div class="py-2 text-uppercase">Stock Status</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="border-0">
+                  <div class="p-2">
+                    <img src='<?php echo $img ?>' alt="" width="70" class="img-fluid rounded shadow-sm">
+                    <div class="ml-3 d-inline-block align-middle">
+                      <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle"><?php echo $bname ?></a></h5><span class="text-muted font-weight-normal font-italic d-block"><?php echo $publication ?></span>
+                    </div>
+                  </div>
+                </th>
+                <td class="border-0 align-middle"><strong>INR ₹ <?php echo $bookprice ?>.00</strong></td>
+                <td class="border-0 align-middle"><strong>1</strong></td>
+                <td class="border-0 align-middle"><a href="#" class="text-dark">
+
+                  <?php if ($count==0):?>
+                    <i class="fa text-danger fa-times-circle"></i>
+                    <?php else: ?>
+                      <i class="fa text-success fa-check-circle"></i>
+                  <?php endif; ?>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- End -->
       </div>
+    </div>
+
+    <div class="row py-5 p-4 bg-white rounded shadow-sm">
+      <div class="col-lg-7">
+        <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Shipping Details</div>
+        <form action="payment.php" method="post">
+          <div class="form-row mt-3">
+            <div class="form-group col-md-6 input-group mb-4 border rounded-pill p-2">
+              <input type="text" class="form-control border-0" name="firstname" id="inputEmail4" placeholder="First Name" required="">
+            </div>
+            <div class="form-group col-md-6 input-group mb-4 border rounded-pill p-2">
+              <input type="text" class="form-control border-0" name="lastname" placeholder="Last Name" required="">
+            </div>
+          </div>
+          <div class="form-group input-group mb-4 border rounded-pill p-2">
+            <input type="text" class="form-control border-0" id="inputAddress" placeholder="Address Line 1" name="add1" required="">
+          </div>
+          <div class="form-group input-group mb-4 border rounded-pill p-2">
+            <input type="text" class="form-control border-0" id="inputAddress2" placeholder="Address Line 2" name="add2" required="">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6 input-group mb-4 border rounded-pill p-2">
+              <input type="email" class="form-control border-0" name="email" id="inputEmail4" placeholder="Email Address" required="">
+            </div>
+            <div class="form-group col-md-6 input-group mb-4 border rounded-pill p-2">
+              <input type="tel" class="form-control border-0" name="number" placeholder="Phone" required="">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6 input-group mb-4 border rounded-pill p-2">
+              <input type="text" class="form-control border-0" id="inputCity" placeholder="City" name="city"required="">
+            </div>
+            <div class="form-group col-md-6 input-group mb-4 border rounded-pill p-2">
+              <input type="text" class="form-control border-0" id="inputState" placeholder="State" name="state"required="">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4 input-group mb-4 border rounded-pill p-2">
+              <input type="text" class="form-control border-0" id="inputZip" placeholder="Zip Code" name="pin"required="">
+            </div>
+            <div class="form-group col-md-8 input-group mb-4 border rounded-pill p-2">
+              <div class="form-check form-check-inline" style="margin-left: 75px;">
+              <input class="form-check-input" type="radio" id="inlineRadio1" name="gender" value="m" checked>
+              <label class="form-check-label" for="inlineRadio1">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio"  id="inlineRadio2" name="gender" value="f">
+              <label class="form-check-label" for="inlineRadio2">Female</label>
+              </div>
+              <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio"  id="inlineRadio3" name="gender" value="0">
+              <label class="form-check-label" for="inlineRadio3">Other</label>
+              </div>
+            </div>
+          </div>
+
+
+
+          <input type="hidden" name="bookid" value=<?php echo $bookid ?>>
+
+          <input type="hidden" name="bookname" value=<?php echo $item_name ?>>
+
+          <input type="hidden" name="amount" value=<?php echo $amount ?>>
+
+          <input type="hidden" name="username" value=<?php echo $username?>>
+
+          <input type="hidden" name="uid" value=<?php echo $uid?>>
+          <br>
+          <br>
+          <?php if ($count==0):?>
+          <input disabled value="Sorry! The book is sold out" class="btn btn-danger rounded-pill py-2 btn-block"></input>
+
+
+          <?php else: ?>
+          <input type="submit" value="Pay Now" class="btn btn-dark rounded-pill py-2 btn-block"></input>
+
+        <?php endif; ?>
+
+        </form>
+      </div>
+      <div class="col-lg-5" style="margin-top:12%">
+        <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Ammount Summary </div>
+        <div class="p-4">
+          <ul class="list-unstyled mb-4">
+            <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>INR ₹ <?php echo $bookprice ?>.00</strong></li>
+            <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping </strong><strong>INR ₹ 00.00</strong></li>
+            <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>INR ₹ 00.00</strong></li>
+            <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
+              <h5 class="font-weight-bold">INR ₹ <?php echo $bookprice ?></h5>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </div>
-  <!-- //copyright -->
+</div>
+</div>
 
-	<!-- js-files -->
-	<!-- jquery -->
-	<script src="js/jquery-2.2.3.min.js"></script>
-	<!-- //jquery -->
+<!-- End Checkout Details-->
 
-	<!-- nav smooth scroll -->
-	<script>
-		$(document).ready(function () {
-			$(".dropdown").hover(
-				function () {
-					$('.dropdown-menu', this).stop(true, true).slideDown("fast");
-					$(this).toggleClass('open');
-				},
-				function () {
-					$('.dropdown-menu', this).stop(true, true).slideUp("fast");
-					$(this).toggleClass('open');
-				}
-			);
-		});
-	</script>
-	<!-- //nav smooth scroll -->
 
-	<!-- popup modal (for location)-->
-	<script src="js/jquery.magnific-popup.js"></script>
-	<script>
-		$(document).ready(function () {
-			$('.popup-with-zoom-anim').magnificPopup({
-				type: 'inline',
-				fixedContentPos: false,
-				fixedBgPos: true,
-				overflowY: 'auto',
-				closeBtnInside: true,
-				preloader: false,
-				midClick: true,
-				removalDelay: 300,
-				mainClass: 'my-mfp-zoom-in'
-			});
+      </div>
 
-		});
-	</script>
-	<!-- //popup modal (for location)-->
+    </div>
 
-	<!-- cart-js -->
-	<script src="js/minicart.js"></script>
-	<script>
-		paypals.minicarts.render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
+    <!-- CLients Section-->
+    <section class="bg-gray">
+      <div class="container">  <!-- //top products -->
+        <!-- middle section -->
+        <div class="join-w3l1">
 
-		paypals.minicarts.cart.on('checkout', function (evt) {
-			var items = this.items(),
-				len = items.length,
-				total = 0,
-				i;
+          <div class="container py-xl-4 py-lg-2">
+            <!-- Third Row [Profiles]-->
+            <h2 class="font-weight-bold mb-2">Famous Quotes
+            </h2>
+            <p class="font-italic text-muted mb-4">Some of the famous quotes of novelist, writer eassyist and renowned persons.
+            </p>
+            <div class="row pb-5 mb-4">
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <!-- Card-->
+                <div class="card rounded shadow-sm border-0">
+                  <div class="card-body p-0">
+                    <div class="bg-primary px-5 py-4 text-center card-img-top">
+                      <img src="images/amour.png" alt="..." width="100" class="rounded-circle mb-2 img-thumbnail d-block mx-auto">
+                      <h5 class="text-white mb-0">– Louis L’Amour
+                      </h5>
+                      <p class="small text-white mb-0">Novelist
+                    </div>
+                    <div class="p-4 d-flex justify-content-center">
+                      <p>“Once you have read a book you care about, some part of it is always with you.”</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <!-- Card-->
+                <div class="card rounded shadow-sm border-0">
+                  <div class="card-body p-0">
+                    <div class="bg-success px-5 py-4 text-center card-img-top">
+                      <img src="images/emerson.png" alt="..." width="100" class="rounded-circle mb-2 img-thumbnail d-block mx-auto">
+                      <h5 class="text-white mb-0">– R.W Emerson
+                      </h5>
+                      <p class="small text-white mb-0">Essayist
+                      </p>
+                    </div>
+                    <div class="p-4 d-flex justify-content-center">
+                      <p>“If we encounter a man of rare intellect, we should ask him what books he reads.”</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <!-- Card-->
+                <div class="card rounded shadow-sm border-0">
+                  <div class="card-body p-0">
+                    <div class="bg-info px-5 py-4 text-center card-img-top">
+                      <img src="images/mark.png" alt="..." width="100" class="rounded-circle mb-2 img-thumbnail d-block mx-auto">
+                      <h5 class="text-white mb-0">– Mark Twain
+                      </h5>
+                      <p class="small text-white mb-0">Writer
+                      </p>
+                    </div>
+                    <div class="p-4 d-flex justify-content-center">
+                      <p>“The man who does not read good books is no better than the man who can’t.”</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <!-- Card-->
+                <div class="card rounded shadow-sm border-0">
+                  <div class="card-body p-0">
+                    <div class="bg-warning px-5 py-4 text-center card-img-top">
+                      <img src="images/rourke.png" alt="..." width="100" class="rounded-circle mb-2 img-thumbnail d-block mx-auto">
+                      <h5 class="text-white mb-0">– P.J. O’Rourke
+                      </h5>
+                      <p class="small text-white mb-0">Journalist
+                      </p>
+                    </div>
+                    <div class="p-4 d-flex justify-content-center">
+                      <p class="bold">“Always read something that will make you look good if you die in the middle of it.”</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-			// Count the number of each item in the cart
-			for (i = 0; i < len; i++) {
-				total += items[i].get('quantity');
-			}
+          </div>
+        </div>
+        <!-- middle section -->
+      </div>
+    </section>
 
-			if (total < 3) {
-				alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
-				evt.preventDefault();
-			}
-		});
-	</script>
-	<!-- //cart-js -->
 
-	<!-- password-script -->
-	<script>
-		window.onload = function () {
-			document.getElementById("password1").onchange = validatePassword;
-			document.getElementById("password2").onchange = validatePassword;
-		}
 
-		function validatePassword() {
-			var pass2 = document.getElementById("password2").value;
-			var pass1 = document.getElementById("password1").value;
-			if (pass1 != pass2)
-				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
-			else
-				document.getElementById("password2").setCustomValidity('');
-			//empty string means no validation error
-		}
-	</script>
-	<!-- //password-script -->
+    <!-- Integrations Section-->
+    <section>
+      <div class="container py-5">
+      <h2 class="font-weight-bold mb-2">Book Planet
+      </h2>
+      <p class="font-italic text-muted mb-4">“Sometimes, you read a book and it fills you with this weird evangelical zeal, and you become convinced that the shattered world will never be put back together unless and until all living humans read the book.”</p>
+      <div class="row pb-5">
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card-->
+          <div class="card rounded shadow-sm border-0">
+            <div class="card-body p-5">
+              <i class="fa fa-dolly fa-2x mb-3 text-primary">
+              </i>
+              <h5>Free Shipping
+              </h5>
+              <p class="small pb-3 pt-1 text-muted font-italic">Enjoy free shipping on 90% of our online books across India.
+              </p>
+              <div class="progress rounded-pill">
+                <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 90%;" class="progress-bar rounded-pill">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card -->
+          <div class="card rounded shadow-sm border-0">
+            <div class="card-body p-5">
+              <i class="fa fa-thumbs-up fa-2x mb-3 text-success">
+              </i>
+              <h5>Trusted
+              </h5>
+              <p class="small pt-1 pb-3 text-muted font-italic">India's most trusted online book store from last 18 years.
+              </p>
+              <div class="progress rounded-pill">
+                <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%;" class="progress-bar bg-success rounded-pill">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <!-- Card -->
+          <div class="card rounded shadow-sm border-0">
+            <div class="card-body p-5">
+              <i class="fa fa-shipping-fast fa-2x mb-3 text-info">
+              </i>
+              <h5>Fast Delivery
+              </h5>
+              <p class="small pb-3 pt-1 text-muted font-italic">Enjoy 2 day delivery option on 80% of our books across India.
+              </p>
+              <div class="progress rounded-pill">
+                <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" class="progress-bar bg-info rounded-pill">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <div class="card rounded shadow-sm border-0">
+            <div class="card-body p-5">
+              <i class="fa fa-shield-alt fa-2x mb-3 text-warning">
+              </i>
+              <h5>Secured
+              </h5>
+              <p class="small pb-3 pt-1 text-muted font-italic">All the transactions on our server are highly secured.
+              </p>
+              <div class="progress rounded-pill">
+                <div role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;" class="progress-bar bg-warning rounded-pill">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
 
-	<!-- quantity -->
-	<script>
-		$('.value-plus').on('click', function () {
-			var divUpd = $(this).parent().find('.value'),
-				newVal = parseInt(divUpd.text(), 10) + 1;
-			divUpd.text(newVal);
-		});
 
-		$('.value-minus').on('click', function () {
-			var divUpd = $(this).parent().find('.value'),
-				newVal = parseInt(divUpd.text(), 10) - 1;
-			if (newVal >= 1) divUpd.text(newVal);
-		});
-	</script>
-	<!--quantity-->
-	<script>
-		$(document).ready(function (c) {
-			$('.close1').on('click', function (c) {
-				$('.rem1').fadeOut('slow', function (c) {
-					$('.rem1').remove();
-				});
-			});
-		});
-	</script>
-	<script>
-		$(document).ready(function (c) {
-			$('.close2').on('click', function (c) {
-				$('.rem2').fadeOut('slow', function (c) {
-					$('.rem2').remove();
-				});
-			});
-		});
-	</script>
-	<script>
-		$(document).ready(function (c) {
-			$('.close3').on('click', function (c) {
-				$('.rem3').fadeOut('slow', function (c) {
-					$('.rem3').remove();
-				});
-			});
-		});
-	</script>
-	<!-- //quantity -->
 
-	<!-- smoothscroll -->
-	<script src="js/SmoothScroll.min.js"></script>
-	<!-- //smoothscroll -->
 
-	<!-- start-smooth-scrolling -->
-	<script src="js/move-top.js"></script>
-	<script src="js/easing.js"></script>
-	<script>
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
+    <!-- Divider Section-->
+    <section class="bg-primary text-white">
+      <div style="margin-left:125px;">
+          <!-- footer categories -->
+          <div class="col-md-12 col-sm-12 footer-grids ">
+            <h3 class="text-white font-weight-bold mb-3" style="margin-left:40px;">Get In Touch With Us.
+            </h3>
+            <ul style="list-style-type: none;">
+              <li class="mb-3">
+                <i class="fas fa-map-marker">
+                </i>&nbsp;&nbsp; Location: Sir M. Visvesvaraya Institute Of Technology, Bangalore &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-mobile">
+                </i>&nbsp;&nbsp;Contact: 9982 xxx xxxx &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-phone">
+                </i>&nbsp;&nbsp;Phone: 0746 xx xxxx &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-envelope-open">
+                </i>
+                <a style="color:white!important;"href="mailto:example@mail.com">&nbsp;&nbsp;Email: admin@bookplanet.ml
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- //social icons -->
 
-				$('html,body').animate({
-					scrollTop: $(this.hash).offset().top
-				}, 1000);
-			});
-		});
-	</script>
-	<!-- //end-smooth-scrolling -->
+      </div>
 
-	<!-- smooth-scrolling-of-move-up -->
-	<script>
-		$(document).ready(function () {
-			/*
-			var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear'
-			};
-			*/
-			$().UItoTop({
-				easingType: 'easeOutQuart'
-			});
+    </section>
 
-		});
-	</script>
-	<!-- //smooth-scrolling-of-move-up -->
 
-	<!-- for bootstrap working -->
-	<script src="js/bootstrap.js"></script>
-	<!-- //for bootstrap working -->
-	<!-- //js-files -->
 
-</body>
 
+    <!-- How it works section-->
+    <section>
+      <div class="container">
+        <div class="text-center">
+          <h2 class="mb-4">Payment Methods</h2>
+          <div class="row">
+            <div class="col-lg-9 mx-auto">
+              <div class="row bg-white p-0 h-100">
+                <!-- lg circle buttons-->
+                <div class="col"><img src="images/pay1.png" alt=""></div>
+                <div class="col"><img src="images/pay2.png" alt=""></div>
+                <div class="col"><img src="images/pay3.png" alt=""></div>
+                <div class="col"><img src="images/pay4.png" alt=""></div>
+                <div class="col"><img src="images/pay5.png" alt=""></div>
+                <div class="col"><img src="images/pay6.png" alt=""></div>
+                <div class="col"><img src="images/pay7.png" alt=""></div>
+                <div class="col"><img src="images/pay8.png" alt=""></div>
+                <div class="col"><img src="images/pay9.png" alt=""></div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2 mb-5 mb-lg-0">
+            <!-- <div class="footer-logo"><img src="images/bp-globe.png" alt="..." class="img-fluid"></div> -->
+          </div>
+          <div class="col-lg-3 mb-5 mb-lg-0">
+            <h5 class="footer-heading">Site pages</h5>
+            <ul class="list-unstyled">
+              <li> <a href="bookplanet.php" class="footer-link">Home</a></li>
+              <li> <a href="contact.php" class="footer-link">Contact</a></li>
+              <li> <a href="index.php" class="footer-link">Logout</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 mb-5 mb-lg-0">
+            <h5 class="footer-heading">Section</h5>
+            <ul class="list-unstyled">
+              <li> <a href="#poetry" class="footer-link">Poetry</a></li>
+              <li> <a href="#thriller" class="footer-link">Thriller</a></li>
+              <li> <a href="#history" class="footer-link">History</a></li>
+              <li> <a href="#shortstory" class="footer-link">Short Story</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h5 class="footer-heading">Social</h5>
+            <ul class="list-unstyled">
+              <li> <a  class="footer-link">Facebook</a></li>
+              <li> <a  class="footer-link">Twitter</a></li>
+              <li> <a  class="footer-link">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyrights">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 text-center text-lg-left">
+              <p class="copyrights-text mb-3 mb-lg-0">&copy; Book Planet <span id="year"></span>. All rights reserved. </p>
+              <!-- If you want to remove the backlink, please purchase a license for this template @ https://bootstrapious.com/attribution-free-license. Big thanks!-->
+
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+              <ul class="list-inline social mb-0">
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-facebook"></i></a><a href="#" class="social-link"><i class="fab fa-twitter"></i></a><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="dashboard/vendor/jquery/jquery.min.js"></script>
+    <script src="dashboard/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="dashboard/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="dashboard/vendor/lightbox2/js/lightbox.js"></script>
+    <script src="dashboard/js/front.js"></script>
+    <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+  </body>
 </html>
