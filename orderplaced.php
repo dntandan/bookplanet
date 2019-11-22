@@ -21,6 +21,27 @@ if(isset($_POST))
   $add2=myUrlEncode($add2);
 }
 ?>
+
+<?php
+require 'vendor/autoload.php';
+$API_KEY = "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";
+$email = new \SendGrid\Mail\Mail();
+$email->setFrom("admin@bookplanet.ml", "Admin - Book Planet");
+$email->setSubject("Shipment Confirmation");
+$email->addTo("deepnarayan006@gmail.com", "Book Planet Order");
+// $email->addContent("text/plain", "Your Shipment is succesfully created");
+$email->addContent(
+    "text/html", "Your Shipment is succesfully created <strong>for Book Planet order</strong>"
+);
+
+$sendgrid = new \SendGrid($API_KEY);
+if ($sendgrid->send($email)) {
+  print "Email sent";
+}
+
+?>
+
+
 <?php
 function myUrlEncode($string) {
     $entities = array('%21', '%2A', '%27', '%28', '%29', '%3B', '%3A', '%40', '%26', '%3D', '%2B', '%24', '%2C', '%2F', '%3F', '%25', '%23', '%5B', '%5D');
