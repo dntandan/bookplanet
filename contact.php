@@ -176,7 +176,7 @@ select.form-control {
 
                     <!-- Social Login -->
                     <div class="form-group col-lg-12 mx-auto">
-                        <a href="welcome.php" class="btn btn-primary btn-block py-2 btn-facebook">
+                        <a href="bookplanet.php" class="btn btn-primary btn-block py-2 btn-facebook">
                             <i class="fa fa-home mr-2"></i>
                             <span class="font-weight-bold">Back To Home</span>
                         </a>
