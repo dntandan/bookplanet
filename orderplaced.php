@@ -1,3 +1,5 @@
+
+<!-- Start Defing Database Variables -->
 <?php
 if(isset($_POST))
 {
@@ -23,34 +25,10 @@ if(isset($_POST))
   $invoice="B-P-I-".rand();
 }
 ?>
-
-<?php
-require 'vendor/autoload.php';
-$API_KEY = "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";
-$email = new \SendGrid\Mail\Mail();
-$email->setFrom("admin@bookplanet.ml", "Admin - Book Planet");
-$email->setSubject("Shipment Confirmation");
-$email->addTo("deepnarayan006@gmail.com", "Book Planet Order");
-// $email->addContent("text/plain", "Your Shipment is succesfully created");
-$email->addContent("text/html", "<center><h1>Book Planet Order Confirmation</h1></center>
-    <hr style='max-width:18%;'>
-    <center>
-      <p>Hello $firstname $lastname, your order number $invoice with Book Planet for the book $bookname is Confirmed.</p>
-      <p>Expect the delivery within 72 hours with the Shipment ID : $trackid <br> with our courier partner Xpressbee.</p>
-      <br>
-      Regards,<br>
-      <strong>Team Book Planet</strong>
-    </center>"
-);
-
-$sendgrid = new \SendGrid($API_KEY);
-if ($sendgrid->send($email)) {
-  print "Email sent";
-}
-
-?>
+<!-- End Defing Database Variables -->
 
 
+<!-- Start SQL Database Storing -->
 <?php
 function myUrlEncode($string) {
     $entities = array('%21', '%2A', '%27', '%28', '%29', '%3B', '%3A', '%40', '%26', '%3D', '%2B', '%24', '%2C', '%2F', '%3F', '%25', '%23', '%5B', '%5D');
@@ -68,31 +46,10 @@ $conn = mysqli_connect("localhost","root","","shop");
 	}
 	$conn->close();
 ?>
-<?php
-	// Authorisation details.
-	$username = "iavinas@yahoo.com";
-	$hash = "2b7e743cb0aab03b891c1c47eb3f3a0000cd2606c5572d91524026f3fc1f690d";
+<!-- End SQL Database Storing -->
 
-	// Config variables. Consult http://api.textlocal.in/docs for more info.
-	$test = "0";
 
-	// Data for text message. This is the text message data.
-	$sender = "TXTLCL"; // This is who the message appears to be from.
-
-  // uncomment below line to send sms
-  // $numbers = "$number"; // A single number or a comma-seperated list of numbers
-
-  // 612 chars or less
-  $message = "Hi $firstname, your Book Planet order has been confirmed. Check your email for details regarding shipment of package.";
-	$message = urlencode($message);
-	$data = "username=".$username."&hash=".$hash."&message=".$message."&sender=".$sender."&numbers=".$numbers."&test=".$test;
-	$ch = curl_init('http://api.textlocal.in/send/?');
-	curl_setopt($ch, CURLOPT_POST, true);
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	$result = curl_exec($ch); // This is the result from the API
-	curl_close($ch);
-?>
+<!-- Start Messege Display -->
 
 <?php
   $con=mysqli_connect("localhost","root","","shop");
@@ -120,6 +77,10 @@ $conn = mysqli_connect("localhost","root","","shop");
   }
   $con->close();
 ?>
+<!-- End Messege Display -->
+
+
+<!-- Start Invoice HTML -->
 <html>
 <head>
 	<title> Book Planet | Order Details </title>
@@ -158,7 +119,7 @@ $conn = mysqli_connect("localhost","root","","shop");
                           <div class="email"><a href="mailto:john@example.com"><?php echo $email?></a></div>
                       </div>
                       <div class="col invoice-details">
-                          <h1 class="invoice-id">INVOICE <?php echo $invoice ?></h1>
+                          <h1 class="invoice-id"><?php echo $invoice ?></h1>
                           <div class="date">Date of Invoice: <?php echo date("d/m/Y") ?></div>
                           <div class="date">Due Date: <?php echo date('d/m/Y', strtotime(' + 10 days')); ?></div>
                       </div>
@@ -428,3 +389,64 @@ $conn = mysqli_connect("localhost","root","","shop");
         }
 </script>
 </html>
+
+<!-- End Invoice HTML -->
+
+
+<!-- Start Sendgrid Email  -->
+<?php
+  if(isset($_POST))
+  {
+    require 'vendor/autoload.php';
+    $API_KEY = "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";
+    $email = new \SendGrid\Mail\Mail();
+    $email->setFrom("admin@bookplanet.ml", "Admin - Book Planet");
+    $email->setSubject("Shipment Confirmation");
+    $email->addTo("deepnarayan006@gmail.com", "Book Planet Order");
+    // $email->addContent("text/plain", "Your Shipment is succesfully created");
+    $email->addContent("text/html", "<center><h1>Book Planet Order Confirmation</h1></center>
+        <hr style='max-width:18%;'>
+        <center>
+          <p>Hello $firstname $lastname, your order number $invoice with Book Planet for the book $bookname is Confirmed.</p>
+          <p>Expect the delivery within 72 hours with the Shipment ID : $trackid <br> with our courier partner Xpressbee.</p>
+          <br>
+          Regards,<br>
+          <strong>Team Book Planet</strong>
+        </center>"
+    );
+
+    $sendgrid = new \SendGrid($API_KEY);
+    if ($sendgrid->send($email)) {
+      print "Email sent";
+    }
+  }
+?>
+<!-- End Sendgrid Email  -->
+
+<!-- Start textlocal SMS  -->
+<?php
+	// Authorisation details.
+	$username = "iavinas@yahoo.com";
+	$hash = "2b7e743cb0aab03b891c1c47eb3f3a0000cd2606c5572d91524026f3fc1f690d";
+
+	// Config variables. Consult http://api.textlocal.in/docs for more info.
+	$test = "0";
+
+	// Data for text message. This is the text message data.
+	$sender = "TXTLCL"; // This is who the message appears to be from.
+
+  // uncomment below line to send sms
+  // $numbers = "$number"; // A single number or a comma-seperated list of numbers
+
+  // 612 chars or less
+  $message = "Hi $firstname, your Book Planet order has been confirmed. Check your email for details regarding shipment of package.";
+	$message = urlencode($message);
+	$data = "username=".$username."&hash=".$hash."&message=".$message."&sender=".$sender."&number=".$number."&test=".$test;
+	$ch = curl_init('http://api.textlocal.in/send/?');
+	curl_setopt($ch, CURLOPT_POST, true);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	$result = curl_exec($ch); // This is the result from the API
+	curl_close($ch);
+?>
+<!-- End textlocal SMS  -->
