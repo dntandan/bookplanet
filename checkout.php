@@ -165,7 +165,7 @@ function myUrlEncode($string) {
             <thead>
               <tr>
                 <th scope="col" class="border-0 bg-light">
-                  <div class="p-2 px-3 text-uppercase">Product</div>
+                  <div class="p-2 px-3 text-uppercase">Book Name</div>
                 </th>
                 <th scope="col" class="border-0 bg-light">
                   <div class="py-2 text-uppercase">Price</div>
@@ -293,7 +293,7 @@ function myUrlEncode($string) {
             <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping </strong><strong>INR ₹ 00.00</strong></li>
             <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>INR ₹ 00.00</strong></li>
             <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
-              <h5 class="font-weight-bold">INR ₹ <?php echo $bookprice ?></h5>
+              <h5 class="font-weight-bold">INR ₹ <?php echo $bookprice ?>.00</h5>
             </li>
           </ul>
         </div>
