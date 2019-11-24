@@ -8,7 +8,7 @@ if(isset($_POST))
   $lastname=$_POST['lastname'];
   $gender=$_POST['gender'];
   $number=$_POST['number'];
-  $email=$_POST['email'];
+  $semail=$_POST['email'];
   $add1=$_POST['add1'];
   $add2=$_POST['add2'];
   $city=$_POST['city'];
@@ -38,7 +38,7 @@ function myUrlEncode($string) {
 ?>
 <?php
 $conn = mysqli_connect("localhost","root","","shop");
-	$sql = "INSERT INTO shipping(b_id,u_id,sf_name,sl_name,ssex,smobile,semail,saddress1,saddress2,stown,sstate,spin) VALUES('$bookid','$uid','$firstname','$lastname','$gender','$number','$email','$add1','$add2','$city','$state','$pin')";
+	$sql = "INSERT INTO shipping(b_id,u_id,sf_name,sl_name,ssex,smobile,semail,saddress1,saddress2,stown,sstate,spin) VALUES('$bookid','$uid','$firstname','$lastname','$gender','$number','$semail','$add1','$add2','$city','$state','$pin')";
 	if($conn->query($sql) === TRUE) {
     	echo '';
 	} else {
@@ -116,7 +116,7 @@ $conn = mysqli_connect("localhost","root","","shop");
                           <h2 class="to"><?php echo $firstname ?>&nbsp;<?php echo $lastname ?></h2>
                           <div class="address">+91 <?php echo $number?></div>
                           <div class="address"><?php echo $add1?>, <?php echo $add2?> , <?php echo $city?> , <?php echo $state?>, <?php echo $pin?></div>
-                          <div class="email"><a href="mailto:john@example.com"><?php echo $email?></a></div>
+                          <div class="email"><a href="mailto:john@example.com"><?php echo $semail?></a></div>
                       </div>
                       <div class="col invoice-details">
                           <h1 class="invoice-id"><?php echo $invoice ?></h1>
@@ -402,7 +402,7 @@ $conn = mysqli_connect("localhost","root","","shop");
     $email = new \SendGrid\Mail\Mail();
     $email->setFrom("admin@bookplanet.ml", "Admin - Book Planet");
     $email->setSubject("Shipment Confirmation");
-    $email->addTo("deepnarayan006@gmail.com", "Book Planet Order");
+    $email->addTo("$semail", "Book Planet Order");
     // $email->addContent("text/plain", "Your Shipment is succesfully created");
     $email->addContent("text/html", "<center><h1>Book Planet Order Confirmation</h1></center>
         <hr style='max-width:18%;'>
