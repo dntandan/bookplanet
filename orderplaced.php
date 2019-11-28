@@ -436,12 +436,12 @@ $conn = mysqli_connect("localhost","root","","shop");
 	$sender = "TXTLCL"; // This is who the message appears to be from.
 
   // uncomment below line to send sms
-  // $numbers = "$number"; // A single number or a comma-seperated list of numbers
+  $numbers = "$number"; // A single number or a comma-seperated list of numbers
 
   // 612 chars or less
   $message = "Hi $firstname, your Book Planet order has been confirmed. Check your email for details regarding shipment of package.";
 	$message = urlencode($message);
-	$data = "username=".$username."&hash=".$hash."&message=".$message."&sender=".$sender."&number=".$number."&test=".$test;
+	$data = "username=".$username."&hash=".$hash."&message=".$message."&sender=".$sender."&numbers=".$numbers."&test=".$test;
 	$ch = curl_init('http://api.textlocal.in/send/?');
 	curl_setopt($ch, CURLOPT_POST, true);
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
