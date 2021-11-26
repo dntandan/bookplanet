@@ -398,7 +398,7 @@ $conn = mysqli_connect("localhost","root","","shop");
   if(isset($_POST))
   {
     require 'vendor/autoload.php';
-    $API_KEY = "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";
+    $API_KEY = "YOUR_SENDGRID_API_KEY";
     $email = new \SendGrid\Mail\Mail();
     $email->setFrom("admin@bookplanet.ml", "Admin - Book Planet");
     $email->setSubject("Shipment Confirmation");
@@ -426,8 +426,8 @@ $conn = mysqli_connect("localhost","root","","shop");
 <!-- Start textlocal SMS  -->
 <?php
 	// Authorisation details.
-	$username = "iavinas@yahoo.com";
-	$hash = "2b7e743cb0aab03b891c1c47eb3f3a0000cd2606c5572d91524026f3fc1f690d";
+	$username = "YOUR_TEXT_LOCAL_USERNAME";
+	$hash = "HASH_CODE_GOES_HERE";
 
 	// Config variables. Consult http://api.textlocal.in/docs for more info.
 	$test = "0";
